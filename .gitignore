@@ -15,3 +15,5 @@ site/solrhome
 combined/data/
 combined/solrhome
 *.error
+
+admin/target/m2e-wtp/web-resources/META-INF/maven/com.mycompany/admin/pom.properties
