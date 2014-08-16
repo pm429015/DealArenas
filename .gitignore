@@ -15,6 +15,7 @@ site/solrhome
 combined/data/
 combined/solrhome
 *.error
+*/.DS_Store
 admin/target/m2e-wtp/web-resources/META-INF/MANIFEST<MF
 admin/target/admin/WEB-INF/classes/rebel.xml
 */lib/jrebel/licensing.info
