@@ -20,7 +20,22 @@
 8. 搞定收工
 
 >有關Spring framework的教學 可以看這裡 [here](http://openhome.cc/Gossip/SpringGossip/)
-														
+	
+克勳補充(08/16)
+
+1. stanly找了一個spring tool：http://spring.io/tools ，左邊的下載後再從步驟一開赤，eclipse就不用重裝一堆plugin了~~
+
+2. project import後左上角有個M表示project已經是maven project了，但我的狀況是porm.xml會少掉jdk.tools的dependency
+
+如果遇到此情況，請在porm.xml增加dependency，格是如下：
+
+ <dependency>
+	<groupId>jdk.tools</groupId>
+	<artifactId>jdk.tools</artifactId>
+	<version>1.7.0_05</version>
+	<scope>system</scope>
+	<systemPath>${JAVA_HOME}/lib/tools.jar</systemPath>
+</dependency>
 																			
 
 /* Original*/
