@@ -12,49 +12,67 @@
 <body>
 
 	<div id="notification_bar"></div>
+
 	<header th:substituteby="layout/partials/header" />
-	
+
 	<div class="container">
 		<div id="content" class="width_setter group" role="main">
 
+			<div class="row" id="home_ads">
+				<div class="col-md-6 text-center">
+					Draw a picture for sellers here
+					<a th:href="@{/still_working}">
+						<input type="button" class="btn btn-success btn-lg" th:value="#{home.seller}"/>
+					</a>	
+<!-- 					<blc:content contentType="Homepage Banner Ad" /> -->
+<!-- 					<div id="banners" -->
+<!-- 						th:if="${contentItem !=null and contentItem['targetUrl'] != null and contentItem['imageUrl'] != null}"> -->
+<!-- 						<a th:href="@{${contentItem['targetUrl']}}"><img -->
+<!-- 							th:src="@{${contentItem['imageUrl']}}" /></a> -->
+<!-- 					</div> -->
+				</div>
+				<!--  col-md-6 -->
+				<div class="col-md-6 text-center">
+					Draw a picture for buyers here
+					<a th:href="@{/still_working}">
+						<input type="button" class="btn btn-danger btn-lg" th:value="#{home.buyer}"/>
+					</a>
+<!-- 					<blc:content contentType="Homepage Banner Ad" /> -->
+<!-- 					<div id="banners" -->
+<!-- 						th:if="${contentItem !=null and contentItem['targetUrl'] != null and contentItem['imageUrl'] != null}"> -->
+<!-- 						<a th:href="@{${contentItem['targetUrl']}}"><img -->
+<!-- 							th:src="@{${contentItem['imageUrl']}}" /></a> -->
+<!-- 					</div> -->
+				</div>
+				<!--  col-md-6 -->
+			</div><!-- row -->
+
+<!-- 			<nav th:substituteby="layout/partials/nav" /> -->
+
+<!-- 			<blc:content contentType="Homepage Middle Promo Snippet" /> -->
+
+<!-- 			<a th:href="@{/register}" -->
+<!-- 				th:if="${contentItem !=null and contentItem['htmlContent'] !=null}" -->
+<!-- 				style="text-decoration: none"> -->
+<!-- 				<div id="home_feature" th:utext="${contentItem['htmlContent']}"></div> -->
+<!-- 			</a> -->
 
 
-			<blc:content contentType="Homepage Banner Ad" />
+<!-- 			<blc:content contentType="Homepage Featured Products Title" /> -->
+<!-- 			<div -->
+<!-- 				th:if="${contentItem !=null and contentItem['messageText'] !=null}" -->
+<!-- 				class="title_bar" th:text="${contentItem['messageText']}"></div> -->
 
-
-			<div id="banners"
-				th:if="${contentItem !=null and contentItem['targetUrl'] != null and contentItem['imageUrl'] != null}">
-				<a th:href="@{${contentItem['targetUrl']}}"><img
-					th:src="@{${contentItem['imageUrl']}}" /></a>
-			</div>
-
-			<nav th:substituteby="layout/partials/nav" />
-
-			<blc:content contentType="Homepage Middle Promo Snippet" />
-
-			<a th:href="@{/register}"
-				th:if="${contentItem !=null and contentItem['htmlContent'] !=null}"
-				style="text-decoration: none">
-				<div id="home_feature" th:utext="${contentItem['htmlContent']}"></div>
-			</a>
-
-
-			<blc:content contentType="Homepage Featured Products Title" />
-			<div
-				th:if="${contentItem !=null and contentItem['messageText'] !=null}"
-				class="title_bar" th:text="${contentItem['messageText']}"></div>
-
-			<ul id="products" class="group">
-				<li th:each="product : ${products}" th:object="${product}"
-					th:include="catalog/partials/productListItem"
-					class="product_container"></li>
-			</ul>
+<!-- 			<ul id="products" class="group"> -->
+<!-- 				<li th:each="product : ${products}" th:object="${product}" -->
+<!-- 					th:include="catalog/partials/productListItem" -->
+<!-- 					class="product_container"></li> -->
+<!-- 			</ul> -->
 		</div>
 	</div>
 	<!-- container-fluid -->
 
 
 	<footer th:substituteby="layout/partials/footer" />
-
 </body>
 </html>

@@ -18,6 +18,7 @@ package com.mycompany.controller.content;
 
 import org.broadleafcommerce.cms.web.controller.BroadleafPageController;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -33,6 +34,13 @@ public class PageController extends BroadleafPageController {
     @Override
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         return super.handleRequest(request, response);
+    }
+    
+    @RequestMapping("/still_working")
+    public ModelAndView chanduForm(){
+    //String message = "Hello World, Spring 3.0!!!";
+    String message = "Hello World, Spring 3.0!!!";
+    return new ModelAndView("content/still_working", "message", message);
     }
 
 }

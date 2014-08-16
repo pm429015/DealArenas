@@ -482,7 +482,7 @@ span.error_spacer {
 	border-bottom: 1px solid rgba(255, 255, 255, .3);
 	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background-color: #000;
-	width: 98%;
+	width: 100%;
 	height: 20px;
 }
 
@@ -542,6 +542,7 @@ header {
 	width: 980px;
 	margin: 0 auto;
 	position: relative;
+	margin-top: 40px;
 }
 
 #header_content_fixed {
@@ -696,9 +697,9 @@ header #header_content #cart_info a.my-account {
 }
 
 nav {
-	width: 940px;
-	height: 70px;
-	margin: 0 20px;
+/* 	width: 940px; */
+/* 	height: 70px; */
+/* 	margin: 0 20px; */
 	border-bottom: double #C8C3C1;
 }
 
@@ -741,6 +742,10 @@ nav ul li a:hover {
 	transition: background-color 0.2s ease-in;
 }
 
+#home_ads{
+	margin-top: 90px;
+}
+
 #banners {
 	width: 940px;
 	margin: 0 0 0 20px;
@@ -767,7 +772,7 @@ nav ul li a:hover {
 
 #content,#checkout_content {
 	width: 980px;
-	margin-top: -5px;
+	margin-top: 80px;
 	background-color: #fff;
 	padding-bottom: 30px;
 	-moz-box-shadow: 0px 2px 7px #C2B9B3;
@@ -775,6 +780,7 @@ nav ul li a:hover {
 	box-shadow: 0px 2px 7px #C2B9B3;
 	z-index: 1;
 	display: block;
+	
 }
 
 #content .title_bar,#checkout_content .title_bar {
