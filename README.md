@@ -27,15 +27,8 @@
 
 2. project import後左上角有個M表示project已經是maven project了，但我的狀況是porm.xml會少掉jdk.tools的dependency
 
-如果遇到此情況，請在porm.xml增加dependency，格是如下：
+如果遇到此情況，請在porm.xml增加dependency，參考資料：http://forum.broadleafcommerce.org/viewtopic.php?f=14&t=2321
 
- <dependency>
-	<groupId>jdk.tools</groupId>
-	<artifactId>jdk.tools</artifactId>
-	<version>1.7.0_05</version>
-	<scope>system</scope>
-	<systemPath>${JAVA_HOME}/lib/tools.jar</systemPath>
-</dependency>
 																			
 
 /* Original*/
