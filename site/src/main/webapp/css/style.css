@@ -28,6 +28,7 @@ html {
 	font-size: 100%;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
+	
 }
 
 html,button,input,select,textarea {
@@ -38,6 +39,7 @@ html,button,input,select,textarea {
 body {
 	margin: 0;
 	font: 12px/18px Georgia, serif;
+	background:#F0FFF0 !important;
 }
 
 ::-moz-selection {
@@ -743,7 +745,7 @@ nav ul li a:hover {
 }
 
 #home_ads{
-	margin-top: 90px;
+	margin-top: 0px;
 }
 
 #banners {
@@ -772,7 +774,7 @@ nav ul li a:hover {
 
 #content,#checkout_content {
 	width: 980px;
-	margin-top: 80px;
+	margin-top: 50px;
 	background-color: #fff;
 	padding-bottom: 30px;
 	-moz-box-shadow: 0px 2px 7px #C2B9B3;
@@ -840,6 +842,15 @@ nav ul li a:hover {
 #order_confirmation .confirmation-note span {
 	font-weight: bold;
 	margin-left: 2px;
+}
+
+#buyer_ads li{
+	height: 100px;
+  	display: inline-block;
+}
+
+#buyer_ads{
+	margin-top: 30px;
 }
 
 .fulfillment_option

@@ -19,8 +19,29 @@
 		<div id="content" class="width_setter group" role="main">
 
 			<div class="row" id="home_ads">
-				<div class="col-md-6 text-center">
-					Draw a picture for sellers here
+				<div class="col-md-12 text-center">
+					<h1><span th:text="#{home.seller.title}"></span></h1>
+				</div>
+				
+				<div class="col-md-4 text-center">
+					<h3><span th:text="#{home.seller1}">30s list</span></h3>
+					<h4><span th:text="#{home.seller1.content}">30s list content</span></h4>
+					<img th:src="@{/img/home/sell_30s.png}" alt="Seller Step 1" />
+				</div>
+				
+				<div class="col-md-4 text-center">
+					<h3><span th:text="#{home.seller2}">ship for free</span></h3>
+					<h4><span th:text="#{home.seller2.content}">free shipping content</span></h4>
+					<img th:src="@{/img/home/sell_ship.png}" alt="Seller Step 2" />
+				</div>
+				
+				<div class="col-md-4 text-center">
+					<h3><span th:text="#{home.seller3}">Get paid</span></h3>
+					<h4><span th:text="#{home.seller3.content}">free shipping content</span></h4>
+					<img th:src="@{/img/home/sell_paid.png}" alt="Seller Step 3" />
+				</div>
+				
+				<div class="col-md-12 text-center">
 					<a th:href="@{/still_working}">
 						<input type="button" class="btn btn-success btn-lg" th:value="#{home.seller}"/>
 					</a>	
@@ -31,22 +52,8 @@
 <!-- 							th:src="@{${contentItem['imageUrl']}}" /></a> -->
 <!-- 					</div> -->
 				</div>
-				<!--  col-md-6 -->
-				<div class="col-md-6 text-center">
-					Draw a picture for buyers here
-					<a th:href="@{/still_working}">
-						<input type="button" class="btn btn-danger btn-lg" th:value="#{home.buyer}"/>
-					</a>
-<!-- 					<blc:content contentType="Homepage Banner Ad" /> -->
-<!-- 					<div id="banners" -->
-<!-- 						th:if="${contentItem !=null and contentItem['targetUrl'] != null and contentItem['imageUrl'] != null}"> -->
-<!-- 						<a th:href="@{${contentItem['targetUrl']}}"><img -->
-<!-- 							th:src="@{${contentItem['imageUrl']}}" /></a> -->
-<!-- 					</div> -->
-				</div>
-				<!--  col-md-6 -->
+				<!--  col-md-12 -->
 			</div><!-- row -->
-
 <!-- 			<nav th:substituteby="layout/partials/nav" /> -->
 
 <!-- 			<blc:content contentType="Homepage Middle Promo Snippet" /> -->
@@ -68,6 +75,38 @@
 <!-- 					th:include="catalog/partials/productListItem" -->
 <!-- 					class="product_container"></li> -->
 <!-- 			</ul> -->
+		</div>
+		
+		<div id="content" class="width_setter group" role="main">
+			<div class="row" id="home_ads">
+				<div class="col-md-12 text-center">
+					<h1><span th:text="#{home.buyer.title}">Easy buy</span></h1>
+<!-- 					<blc:content contentType="Homepage Banner Ad" /> -->
+<!-- 					<div id="banners" -->
+<!-- 						th:if="${contentItem !=null and contentItem['targetUrl'] != null and contentItem['imageUrl'] != null}"> -->
+<!-- 						<a th:href="@{${contentItem['targetUrl']}}"><img -->
+<!-- 							th:src="@{${contentItem['imageUrl']}}" /></a> -->
+<!-- 					</div> -->
+				</div>
+				<!--  col-md-12 -->
+				<div class="col-md-5" >
+					<h3 class="text-center"><span th:text="#{home.buyer.guarantee.title}">guarantee title</span></h3>
+					<ul id="buyer_ads">
+						<li><h4><span th:text="#{home.buyer.guarantee1}">Our guarantee1</span></h4></li>
+						<li><h4><span th:text="#{home.buyer.guarantee2}">Our guarantee2</span></h4></li>
+						<li><h4><span th:text="#{home.buyer.guarantee3}">Our guarantee3</span></h4></li>
+					</ul>
+				</div><!--  col-md-5 -->
+				
+				<div class="col-md-7 text-center">
+					<img th:src="@{/img/home/buyer_protection.png}" alt="Buyer protection" />
+				</div><!--  col-md-6 -->
+				<div class="col-md-12 text-center">
+					<a th:href="@{/still_working}">
+						<input type="button" class="btn btn-danger btn-lg" th:value="#{home.buyer}"/>
+					</a>
+				</div>
+			</div><!-- row -->
 		</div>
 	</div>
 	<!-- container-fluid -->
