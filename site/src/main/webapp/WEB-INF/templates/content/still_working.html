@@ -6,9 +6,10 @@
 
 	<div id="cart">
 		<form class="form-horizontal text-center" role="form">
-			<p>Still Working ....(put a picture which shows that we are working on it.)</p>
-			<p>Put your email here. We will contact you once we are ready</p>
+			<h1><span th:text="#{working.title}">Still Working</span></h1>
+			<h4 id="working_content"><span th:text="#{working.content}">Put your email here. We will contact you once we are ready</span></h4>
 			<div class="form-group">
+				<h4><span th:text="#{working.getEmail}">collect email</span></h4>
 				<label for="inputPassword" class="col-md-3 control-label">Email</label>
 				<div class="col-md-4">
 					<input type="email" class="form-control" placeholder="Enter email"/>

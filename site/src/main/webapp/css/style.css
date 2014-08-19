@@ -913,6 +913,11 @@ px
 	padding: 10px 5px;
 }
 
+/* Working page*/
+#working_content{
+	margin-top:30px;
+}
+
 /* Manage Account left-nav*/
 #account-menu {
 	float: left;
