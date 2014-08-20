@@ -13,19 +13,19 @@
 		<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 			<ul class="nav navbar-nav">
 				<!-- For anonymous user -->
-				<div th:if="${customer.anonymous}" th:remove="tag">
-					<ul class="nav navbar-nav">
-						<li class="page-scroll">
-							<a class="account" th:href="@{/login}"> 
-								<span th:text="#{home.login}">Login</span>
-							</a> </li>
-						<li class="page-scroll">
-							<a class="account" th:href="@{/register}"> 
-								<span th:text="#{home.register}">Register</span> 
-							</a>
-						</li>
-					</ul>
-				</div>
+<!-- 				<div th:if="${customer.anonymous}" th:remove="tag"> -->
+<!-- 					<ul class="nav navbar-nav"> -->
+<!-- 						<li class="page-scroll"> -->
+<!-- 							<a class="account" th:href="@{/login}">  -->
+<!-- 								<span th:text="#{home.login}">Login</span> -->
+<!-- 							</a> </li> -->
+<!-- 						<li class="page-scroll"> -->
+<!-- 							<a class="account" th:href="@{/register}">  -->
+<!-- 								<span th:text="#{home.register}">Register</span>  -->
+<!-- 							</a> -->
+<!-- 						</li> -->
+<!-- 					</ul> -->
+<!-- 				</div> -->
 				
 				<!-- For login user -->
 				<div th:unless="${customer.anonymous}" th:remove="tag">

@@ -913,9 +913,13 @@ px
 	padding: 10px 5px;
 }
 
-/* Working page*/
+/* comming soon page*/
 #working_content{
 	margin-top:30px;
+}
+
+#collect_email{
+	margin-bottom:20px;
 }
 
 /* Manage Account left-nav*/
@@ -2155,7 +2159,7 @@ ul.payment_methods li {
 
 footer {
 	width: 940px;
-	background: url(../img/the-heat-clinic-seal.png) top center no-repeat;
+/* 	background: url(../img/the-heat-clinic-seal.png) top center no-repeat; */
 	margin: 40px auto;
 	padding: 0 20px;
 	padding-bottom: 40px;
