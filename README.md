@@ -1,4 +1,4 @@
-## DealArenas (暫定)好康競技場
+## DealArenas (暫定)二手競技場
 
 請按照 Getting Started Guide 的教學把專案跑起來玩一玩他的基本功能 基本上大部份的功能已經完成 主要就是中文化和外觀改一改 資料庫的部分現在先暫定Mysql因為他有教學 Readme就當做我們留言板吧 有問題請留言
 																	       
