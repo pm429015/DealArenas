@@ -11,7 +11,17 @@
 		</div>
 		<!-- navbar-header -->
 		<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-			<ul class="nav navbar-nav">
+			<ul class="nav navbar-nav navbar-right">
+				
+                    <li class="page-scroll">
+                        <a href="#buy"><span th:text="#{home.buy}">Buy</span></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#sell"><span th:text="#{home.sell}">sell</span></a>
+                    </li>
+                   
+                
+                
 				<!-- For anonymous user -->
 <!-- 				<div th:if="${customer.anonymous}" th:remove="tag"> -->
 <!-- 					<ul class="nav navbar-nav"> -->
@@ -28,19 +38,19 @@
 <!-- 				</div> -->
 				
 				<!-- For login user -->
-				<div th:unless="${customer.anonymous}" th:remove="tag">
-					<ul class="nav navbar-nav">
-						<li class="page-scroll">
-							<a class="my-account" th:href="@{/account}" th:text="${customer.firstName}"></a>
-						</li>
+<!-- 				<div th:unless="${customer.anonymous}" th:remove="tag"> -->
+<!-- 					<ul class="nav navbar-nav"> -->
+<!-- 						<li class="page-scroll"> -->
+<!-- 							<a class="my-account" th:href="@{/account}" th:text="${customer.firstName}"></a> -->
+<!-- 						</li> -->
 						
-						<li class="page-scroll">
-							<a th:href="@{/logout}"> 
-								<span th:text="#{home.logout}">Logout</span>
-							</a>
-						</li>
-					</ul>
-				</div>
+<!-- 						<li class="page-scroll"> -->
+<!-- 							<a th:href="@{/logout}">  -->
+<!-- 								<span th:text="#{home.logout}">Logout</span> -->
+<!-- 							</a> -->
+<!-- 						</li> -->
+<!-- 					</ul> -->
+<!-- 				</div> -->
 			</ul>
 		</div>
 		<!-- collapse -->

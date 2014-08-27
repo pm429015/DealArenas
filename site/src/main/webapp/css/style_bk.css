@@ -706,18 +706,18 @@ nav {
 	border-bottom: double #C8C3C1;
 }
 
-/* nav ul { */
-/* 	width: 100%; */
-/* 	margin: 0; */
-/* 	padding: 0; */
-/* 	list-style: none; */
-/* } */
+nav ul {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 
-/* nav ul li { */
-/* 	margin: 0; */
-/* 	padding: 0; */
-/* 	display: inline; */
-/* } */
+nav ul li {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
 
 nav ul li a {
 	font: 16px/76px 'Open Sans', Helvetica, sans-serif;
@@ -744,43 +744,6 @@ nav ul li a:hover {
 	-o-transition: background-color 0.2s ease-in;
 	transition: background-color 0.2s ease-in;
 }
-
-/* header */
-header {
-    text-align: center;
-    color: #fff;
-    background: #18bc9c;
-    height: 100%;
-
-}
-
-header .container {
-    padding-top: 200px;
-    padding-bottom: 200px;
-}
-
-header img {
-    display: block;
-    margin: 0 auto 20px;
-}
-
-header .intro-text .name {
-    display: block;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 2em;
-    font-weight: 700;
-}
-
-header .intro-text .skills {
-    font-size: 1.25em;
-    font-weight: 300;
-}
-
-
-
-
-
 
 #home_ads{
 	margin-top: 0px;
