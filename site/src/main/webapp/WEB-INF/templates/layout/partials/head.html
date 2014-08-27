@@ -16,6 +16,7 @@
     <link
 		th:href="@{//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css}"
 		rel="stylesheet"></link>
+	<link rel="shortcut icon" th:href="@{/img/icon.ico}"></link>
     <blc:bundle name="style.css" 
                 mapping-prefix="/css/"
                 files="style.css,
@@ -25,5 +26,6 @@
     
 
     <script src="../../js/libs/modernizr-2.5.3.min.js" th:src="@{/js/libs/modernizr-2.5.3.min.js}"></script>
+    
     
     <blc:google_universal_analytics ordernumber="${order?.orderNumber}" />

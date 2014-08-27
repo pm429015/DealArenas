@@ -16,10 +16,24 @@ audio,canvas,video {
 	*zoom: 1;
 }
 
-audio:not ([controls] ) {
-	display: none;
-}
+audio
+:not
+ 
+(
+[
+controls
+]
+ 
+)
+{
+display
+:
+ 
+none
+;
 
+
+}
 .hide,[hidden] {
 	display: none;
 }
@@ -28,7 +42,6 @@ html {
 	font-size: 100%;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
-	
 }
 
 html,button,input,select,textarea {
@@ -39,7 +52,7 @@ html,button,input,select,textarea {
 body {
 	margin: 0;
 	font: 12px/18px Georgia, serif;
-	background:#F0FFF0 !important;
+	background: #F0FFF0 !important;
 }
 
 ::-moz-selection {
@@ -174,10 +187,22 @@ img {
 	vertical-align: middle;
 }
 
-svg:not (:root ) {
-	overflow: hidden;
-}
+svg
+:not
+ 
+(
+:root
+ 
+)
+{
+overflow
+:
+ 
+hidden
+;
 
+
+}
 figure {
 	margin: 0;
 }
@@ -234,6 +259,16 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 button[disabled],input[disabled] {
 	cursor: default;
 	background-color: #d9d9d9;
+}
+
+.btn-xlarge {
+	padding: 15px 60px;
+	font-size: 30px;
+	line-height: normal;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	text-align:center
 }
 
 input[type="checkbox"],input[type="radio"] {
@@ -490,12 +525,12 @@ span.error_spacer {
 
 .navbar-brand {
 	font-weight: 700;
-	color:#fff;
+	color: #fff;
 }
 
 #brand {
 	font-size: 25px;
-	color: #fff;
+	color:#ffd500;
 }
 
 .navbar-brand:focus {
@@ -503,7 +538,8 @@ span.error_spacer {
 }
 
 .navbar-custom a {
-	font-size: 16px;
+	font-size: 20px;
+	
 }
 
 .navbar-custom .nav li a {
@@ -529,8 +565,8 @@ span.error_spacer {
 	outline: 0;
 }
 
-.navbar-custom .nav .page-scroll a{
-	color:#fff;
+.navbar-custom .nav .page-scroll a {
+	color:#ffd500;
 }
 
 header {
@@ -700,9 +736,9 @@ header #header_content #cart_info a.my-account {
 }
 
 nav {
-/* 	width: 940px; */
-/* 	height: 70px; */
-/* 	margin: 0 20px; */
+	/* 	width: 940px; */
+	/* 	height: 70px; */
+	/* 	margin: 0 20px; */
 	border-bottom: double #C8C3C1;
 }
 
@@ -718,7 +754,6 @@ nav {
 /* 	padding: 0; */
 /* 	display: inline; */
 /* } */
-
 nav ul li a {
 	font: 16px/76px 'Open Sans', Helvetica, sans-serif;
 	font-weight: 600;
@@ -747,42 +782,50 @@ nav ul li a:hover {
 
 /* header */
 header {
-    text-align: center;
-    color: #fff;
-    background: #18bc9c;
-    height: 100%;
-
+	text-align: center;
+	color: #fff;
+	background: #18bc9c;
+	height: 100%;
 }
 
 header .container {
-    padding-top: 200px;
-    padding-bottom: 200px;
+	padding-top: 100px;
+	padding-bottom: 150px;
 }
 
 header img {
-    display: block;
-    margin: 0 auto 20px;
+	display: block;
+	margin: 0 auto 20px;
 }
 
 header .intro-text .name {
-    display: block;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 2em;
-    font-weight: 700;
+	display: block;
+/* 	text-transform: uppercase; */
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 2em;
+	font-weight: 650;
 }
 
 header .intro-text .skills {
-    font-size: 1.25em;
-    font-weight: 300;
+	font-size: 1.25em;
+	font-weight: 300;
 }
 
+.landing-btn{
+	margin-top: 50px;
+}
 
+#sell,#buy{
+	height: 100%;
+	margin-top: 90px;
+}
 
+#buy{
+	background: #f8ec99;
+	padding-bottom: 100px;
+}
 
-
-
-#home_ads{
+#home_ads {
 	margin-top: 0px;
 	padding: 0px 10px;
 }
@@ -821,7 +864,7 @@ header .intro-text .skills {
 	box-shadow: 0px 2px 7px #C2B9B3;
 	z-index: 1;
 	display: block;
-	font-family: "Microsoft Jhenghei",sans-serif;	
+	font-family: "Microsoft Jhenghei", sans-serif;
 }
 
 #content .title_bar,#checkout_content .title_bar {
@@ -883,12 +926,12 @@ header .intro-text .skills {
 	margin-left: 2px;
 }
 
-#buyer_ads li{
+#buyer_ads li {
 	height: 100px;
-  	display: inline-block;
+	display: inline-block;
 }
 
-#buyer_ads{
+#buyer_ads {
 	margin-top: 30px;
 	padding: 0px 10px;
 }
@@ -897,21 +940,29 @@ header .intro-text .skills {
 ,
 {
 margin-left
+
+
 :
+
  
+
 20
 px
-;
 
-    
+
+;
 margin-bottom
+
+
 :
+
  
+
 20
 px
+
+
 ;
-
-
 }
 #account {
 	margin-top: 30px;
@@ -954,12 +1005,12 @@ px
 }
 
 /* comming soon page*/
-#working_content{
-	margin-top:30px;
+#working_content {
+	margin-top: 30px;
 }
 
-#collect_email{
-	margin-bottom:20px;
+#collect_email {
+	margin-bottom: 20px;
 }
 
 /* Manage Account left-nav*/
@@ -2198,8 +2249,8 @@ ul.payment_methods li {
 }
 
 footer {
-/*	width: 940px; */
-/* 	background: url(../img/the-heat-clinic-seal.png) top center no-repeat; */
+	/*	width: 940px; */
+	/* 	background: url(../img/the-heat-clinic-seal.png) top center no-repeat; */
 	margin: 40px auto;
 	padding: 0 20px;
 	padding-bottom: 40px;
@@ -2267,14 +2318,14 @@ footer .copyright {
 }
 
 footer a.nav_link {
-	color:#7f8c8d;
+	color: #7f8c8d;
 	padding: 10px 5px;
-	cursor:pointer;
+	cursor: pointer;
 }
 
 footer a.nav_link:hover {
 	background-color: #F0FFF0;
-	color:#333;
+	color: #333;
 }
 
 /* Shared styles between all buttons */
