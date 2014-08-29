@@ -19,28 +19,45 @@ package com.mycompany.controller.content;
 import org.broadleafcommerce.cms.web.controller.BroadleafPageController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.mycompany.bean.mail.SendEmail;
+
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * This class works in combination with the PageHandlerMapping which finds a category based upon
- * the passed in URL.
+ * This class works in combination with the PageHandlerMapping which finds a
+ * category based upon the passed in URL.
  */
 @Controller("blPageController")
 public class PageController extends BroadleafPageController {
-    
-    @Override
-    public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        return super.handleRequest(request, response);
-    }
-    
-    @RequestMapping("/still_working")
-    public ModelAndView chanduForm(){
-    //String message = "Hello World, Spring 3.0!!!";
-    String message = "Hello World, Spring 3.0!!!";
-    return new ModelAndView("content/still_working", "message", message);
-    }
+	
+	@Resource(name="sendEmail")
+	private SendEmail sendEmail;
+
+	@Override
+	public ModelAndView handleRequest(HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		return super.handleRequest(request, response);
+	}
+
+	@RequestMapping("/still_working")
+	public ModelAndView chanduForm() {
+		// String message = "Hello World, Spring 3.0!!!";
+		String message = "Hello World, Spring 3.0!!!";
+		return new ModelAndView("content/still_working", "message", message);
+	}
+	
+	@RequestMapping(value="/collectEmail" , method=RequestMethod.GET)
+	public ModelAndView register(@RequestParam(value = "email") String email) {
+		System.out.println("got an email: "+email);
+		sendEmail.sendMail("dealarenas@no-reply", "pm429015@gmail.com", email, email);
+		
+		return new ModelAndView("redirect:/still_working");
+	}
 
 }
