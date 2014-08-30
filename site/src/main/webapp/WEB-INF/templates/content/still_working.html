@@ -1,11 +1,12 @@
 <div>
-	<div style="display: none;" th:fragment="title" th:inline="text">Still
-		Working - Broadleaf Demo - Heat Clinic</div>
+	<div style="display: none;" th:fragment="title" th:inline="text">即將登場
+		- 二手戰場</div>
 
 
 
 	<div id="cart">
-		<form action="collectEmail" class="form-horizontal text-center" role="form" method="get">
+		<form action="collectEmail" class="form-horizontal text-center"
+			role="form" method="get">
 			<h1>
 				<span th:text="#{working.title}">Still Working</span>
 			</h1>
@@ -13,19 +14,24 @@
 				<span th:text="#{working.content}">Put your email here. We
 					will contact you once we are ready</span>
 			</h4>
-			<img th:src="@{/img/coming-soon.png}" alt="comming soon" />
+			<div class="col-md-12 text-center">
+				<img th:src="@{/img/coming-soon.png}" alt="comming soon" />
+			</div>
+			
 			<div class="form-group">
 				<h4 id="collect_email">
 					<span th:text="#{working.hint}">collect email</span>
 				</h4>
 				<label for="inputPassword" class="col-md-3 control-label"><span
 					th:text="#{working.email.label}">Your Email</span></label>
-					<div class="col-md-4">
-						<input type="text" name="email" class="form-control"
-							th:placeholder="#{working.EmailPlaceHolder}" />
-					</div>
-					<input type="submit" value="Submit" class="btn btn-danger col-md-2"
-						th:value="#{working.EmailSubmit}" />
+				<div class="col-md-4">
+					<input type="text" name="email" class="form-control"
+						th:placeholder="#{working.EmailPlaceHolder}" />
+				</div>
+				<a href=""
+					onClick="ga('send', 'event', { eventCategory: 'send-email', eventAction: 'click'});"><input
+					type="button" class="btn btn-danger col-md-2"
+					th:value="#{working.EmailSubmit}" /></a>
 				<!-- col-md-10 -->
 
 			</div>
@@ -34,3 +40,20 @@
 	</div>
 
 </div>
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', '//www.google-analytics.com/analytics.js',
+			'ga');
+
+	ga('create', 'UA-53951020-1', 'auto');
+	ga('send', 'pageview');-
+</script>

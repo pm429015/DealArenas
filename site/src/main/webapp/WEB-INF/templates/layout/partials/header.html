@@ -6,7 +6,7 @@
 				<i class="fa fa-bars"></i>
 			</button>
 			<a class="navbar-brand" th:href="@{/}" id="brand">
-				<i class="fa fa-play-circle"></i><span class="light" th:text="#{name}">DealArenas</span>
+				<i class="fa fa-play-circle"></i><span class="light" th:text="#{home.brand}">DealArenas</span>
 			</a>
 		</div>
 		<!-- navbar-header -->
@@ -14,10 +14,10 @@
 			<ul class="nav navbar-nav navbar-right">
 				
                     <li class="page-scroll">
-                        <a href="#buy" class="navbar-texts"><span th:text="#{home.buy}">Buy</span></a>
+                        <a href="#buy" class="navbar-texts" onClick="ga('send', 'event', { eventCategory: 'buy-scroll', eventAction: 'click'});"><span th:text="#{home.buy}">Buy</span></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#sell"><span th:text="#{home.sell}">sell</span></a>
+                        <a href="#sell" onClick="ga('send', 'event', { eventCategory: 'sell-scroll', eventAction: 'click'});"><span th:text="#{home.sell}">sell</span></a>
                     </li>
                    
                 

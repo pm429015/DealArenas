@@ -30,11 +30,11 @@
                 </div>
                 
                 <div class="col-md-4 col-md-offset-2 col-sm-12 landing-btn">
-                	<a href="#buy"><input type="button" class="btn btn-primary btn-xlarge" th:value="#{home.buy}"/></a>
+                	<a href="#buy" onClick="ga('send', 'event', { eventCategory: 'buy-scroll', eventAction: 'click'});"><input type="button" class="btn btn-primary btn-xlarge" th:value="#{home.buy}"/></a>
                 </div>
                 
                 <div class="col-md-4 col-sm-12 landing-btn">
-                	<a href="#sell"><input type="button" class="btn btn-danger btn-xlarge" th:value="#{home.sell}"/></a>
+                	<a href="#sell" onClick="ga('send', 'event', { eventCategory: 'sell-scroll', eventAction: 'click'});"><input type="button" class="btn btn-danger btn-xlarge" th:value="#{home.sell}"/></a>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
 				</div>
 				
 				<div class="col-md-12 text-center" style='margin:10px auto;'>
-					<a th:href="@{/still_working}">
+					<a th:href="@{/still_working}" onClick="ga('send', 'event', { eventCategory: 'seller-start', eventAction: 'click'});">
 						<input type="button" class="btn btn-danger btn-lg" th:value="#{home.seller}"/>
 					</a>	
 <!-- 					<blc:content contentType="Homepage Banner Ad" /> -->
@@ -126,14 +126,15 @@
 						<li><h4><span th:text="#{home.buyer.guarantee1}">Our guarantee1</span></h4></li>
 						<li><h4><span th:text="#{home.buyer.guarantee2}">Our guarantee2</span></h4></li>
 						<li><h4><span th:text="#{home.buyer.guarantee3}">Our guarantee3</span></h4></li>
+						<li><h4><span th:text="#{home.buyer.guarantee4}">Our guarantee4</span></h4></li>
 					</ul>
 				</div><!--  col-md-6 -->
 				
-				<div class="col-md-4 col-md-offset-1">
+				<div class="col-md-5">
 					<img class="img-responsive" style='margin: 0 auto;' th:src="@{/img/home/verified.png}" alt="Buyer protection" />
 				</div><!--  col-md-6 -->
 				<div class="col-md-12 text-center" style='margin:10px auto;'>
-					<a th:href="@{/still_working}">
+					<a th:href="@{/still_working}" onClick="ga('send', 'event', { eventCategory: 'buyer-start', eventAction: 'click'});">
 						<input type="button" class="btn btn-primary btn-lg" th:value="#{home.buyer}"/>
 					</a>
 				</div>

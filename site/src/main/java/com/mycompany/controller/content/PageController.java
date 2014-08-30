@@ -55,7 +55,7 @@ public class PageController extends BroadleafPageController {
 	@RequestMapping(value="/collectEmail" , method=RequestMethod.GET)
 	public ModelAndView register(@RequestParam(value = "email") String email) {
 		System.out.println("got an email: "+email);
-		sendEmail.sendMail("dealarenas@no-reply", "pm429015@gmail.com", email, email);
+		sendEmail.sendMail("dealarenas@no-reply", "dealerarenas@gmail.com", email, email);
 		
 		return new ModelAndView("redirect:/still_working");
 	}
