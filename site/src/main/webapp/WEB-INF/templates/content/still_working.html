@@ -1,6 +1,6 @@
 <div>
 	<div style="display: none;" th:fragment="title" th:inline="text">即將登場
-		- 二手戰場</div>
+		- 二手競技場</div>
 
 
 
@@ -14,46 +14,92 @@
 				<span th:text="#{working.content}">Put your email here. We
 					will contact you once we are ready</span>
 			</h4>
-			<div class="col-md-12 text-center">
-				<img th:src="@{/img/coming-soon.png}" alt="comming soon" />
+			<div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
+				<img class="img-responsive" th:src="@{/img/coming-soon.png}" alt="comming soon" />
 			</div>
-			
-			<div class="form-group">
-				<h4 id="collect_email">
-					<span th:text="#{working.hint}">collect email</span>
-				</h4>
-				<label for="inputPassword" class="col-md-3 control-label"><span
-					th:text="#{working.email.label}">Your Email</span></label>
-				<div class="col-md-4">
-					<input type="text" name="email" class="form-control"
-						th:placeholder="#{working.EmailPlaceHolder}" />
-				</div>
-				<a href=""
-					onClick="ga('send', 'event', { eventCategory: 'send-email', eventAction: 'click'});"><input
-					type="button" class="btn btn-danger col-md-2"
-					th:value="#{working.EmailSubmit}" /></a>
-				<!-- col-md-10 -->
 
-			</div>
+			<!-- 			<div class="form-group"> -->
+			<!-- 				<h4 id="collect_email"> -->
+			<!-- 					<span th:text="#{working.hint}">collect email</span> -->
+			<!-- 				</h4> -->
+			<!-- 				<label for="inputPassword" class="col-md-3 control-label"><span -->
+			<!-- 					th:text="#{working.email.label}">Your Email</span></label> -->
+			<!-- 				<div class="col-md-4"> -->
+			<!-- 					<input type="text" name="email" class="form-control" -->
+			<!-- 						th:placeholder="#{working.EmailPlaceHolder}" required="required"/> -->
+			<!-- 				</div> -->
+			<!-- 				<a href="" -->
+			<!-- 					onClick="ga('send', 'event', { eventCategory: 'send-email', eventAction: 'click'});"><input -->
+			<!-- 					type="submit" class="btn btn-danger col-md-2" -->
+			<!-- 					th:value="#{working.EmailSubmit}" /></a> -->
+			<!-- 				col-md-10 -->
+
+			<!-- 			</div> -->
 			<!-- form group -->
 		</form>
+		<div class="col-md-9 col-md-offset-2">
+			<div id="wufoo-z19jlond036aat6">
+				Fill out my <a
+					href="https://pm429015.wufoo.com/forms/z19jlond036aat6">online
+					form</a>.
+			</div>
+			
+			<script type="text/javascript">
+				var z19jlond036aat6;
+				(function(d, t) {
+					var s = d.createElement(t), options = {
+						'userName' : 'pm429015',
+						'formHash' : 'z19jlond036aat6',
+						'autoResize' : true,
+						'height' : '272',
+						'async' : true,
+						'host' : 'wufoo.com',
+						'header' : 'show',
+						'ssl' : true
+					};
+					s.src = ('https:' == d.location.protocol ? 'https://'
+							: 'http://')
+							+ 'www.wufoo.com/scripts/embed/form.js';
+					s.onload = s.onreadystatechange = function() {
+						var rs = this.readyState;
+						if (rs)
+							if (rs != 'complete')
+								if (rs != 'loaded')
+									return;
+						try {
+							z19jlond036aat6 = new WufooForm();
+							z19jlond036aat6.initialize(options);
+							z19jlond036aat6.display();
+						} catch (e) {
+						}
+					};
+					var scr = d.getElementsByTagName(t)[0], par = scr.parentNode;
+					par.insertBefore(s, scr);
+				})(document, 'script');
+			</script>
+
+		</div>
+		
+<!-- 		google analytics -->
+		<script>
+			(function(i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function() {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script',
+					'//www.google-analytics.com/analytics.js', 'ga');
+
+			ga('create', 'UA-53951020-1', 'auto');
+			ga('send', 'pageview');
+		</script>
 	</div>
+
 
 </div>
 
-<script>
-	(function(i, s, o, g, r, a, m) {
-		i['GoogleAnalyticsObject'] = r;
-		i[r] = i[r] || function() {
-			(i[r].q = i[r].q || []).push(arguments)
-		}, i[r].l = 1 * new Date();
-		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-		a.async = 1;
-		a.src = g;
-		m.parentNode.insertBefore(a, m)
-	})(window, document, 'script', '//www.google-analytics.com/analytics.js',
-			'ga');
 
-	ga('create', 'UA-53951020-1', 'auto');
-	ga('send', 'pageview');-
-</script>
