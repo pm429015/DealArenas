@@ -728,6 +728,7 @@ nav ul li a:hover {
 header .container {
 	padding-top: 100px;
 	padding-bottom: 150px;
+	display: block;
 }
 
 header img {
@@ -844,8 +845,7 @@ header .intro-text .name {
 }
 
 #buyer_ads li {
-	height: 80px;
-	display: inline-block;
+	display: inline-block;;
 }
 
 #buyer_ads {

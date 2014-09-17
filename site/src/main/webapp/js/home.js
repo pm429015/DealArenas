@@ -1,4 +1,5 @@
 $(function() {
+	/*
 	$('.page-scroll a').bind('click', function(event) {
 		var $anchor = $(this);
 		$('html, body').stop().animate({
@@ -11,6 +12,22 @@ $(function() {
 		var $anchor = $(this);
 		$('html, body').stop().animate({
 			scrollTop : $($anchor.attr('href')).offset().top
+		}, 1000, 'easeInOutExpo');
+		event.preventDefault();
+	});
+	*/
+	$(".buyer-btn").bind("click",function(){
+		ga('send', 'event', { eventCategory: 'buy-scroll', eventAction: 'click'});
+		$('html, body').stop().animate({
+			scrollTop : $("#buy").offset().top
+		}, 1000, 'easeInOutExpo');
+		event.preventDefault();
+	});
+	
+	$(".seller-btn").bind("click",function(){
+		ga('send', 'event', { eventCategory: 'sell-scroll', eventAction: 'click'});
+		$('html, body').stop().animate({
+			scrollTop : $("#sell").offset().top
 		}, 1000, 'easeInOutExpo');
 		event.preventDefault();
 	});
