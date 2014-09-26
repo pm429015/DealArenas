@@ -101,15 +101,17 @@ footer .nav-pills {
 
 footer .copyright {
 	padding: 10px 5px;
+	font-size: 18px;
 }
 
 footer a.nav_link {
 	color: #7f8c8d;
-	padding: 10px 5px;
+	padding: 12px 5px;
 	cursor: pointer;
+	font-size: 18px;
 }
 
 footer a.nav_link:hover {
 	background-color: #F0FFF0;
-	color: #333;
+	color: #d14;
 }

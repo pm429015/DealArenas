@@ -4210,3 +4210,16 @@ button[disabled]:hover,input[disabled]:hover {
 .icon-fullscreen {
 	background-position: -456px -144px;
 }
+
+/* About us */
+#about_us_title{
+	text-align: center;
+}
+
+.nav_tabs{
+	font-size: 20px;
+	text-align: center;
+	color:black;
+}
+
+

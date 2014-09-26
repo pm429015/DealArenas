@@ -52,6 +52,27 @@ public class PageController extends BroadleafPageController {
 		return new ModelAndView("content/still_working", "message", message);
 	}
 	
+	@RequestMapping("/about_us")
+	public ModelAndView aboutUs() {
+		// String message = "Hello World, Spring 3.0!!!";
+		String message = "Hello World, Spring 3.0!!!";
+		return new ModelAndView("FAQ/AboutUs", "message", message);
+	}
+	
+	@RequestMapping("/seller_FAQ")
+	public ModelAndView seller_FAQ() {
+		// String message = "Hello World, Spring 3.0!!!";
+		String message = "Hello World, Spring 3.0!!!";
+		return new ModelAndView("FAQ/sellerFAQ", "message", message);
+	}
+	
+	@RequestMapping("/buyer_FAQ")
+	public ModelAndView buyer_FAQ() {
+		// String message = "Hello World, Spring 3.0!!!";
+		String message = "Hello World, Spring 3.0!!!";
+		return new ModelAndView("FAQ/buyerFAQ", "message", message);
+	}
+	
 	@RequestMapping(value="/collectEmail" , method=RequestMethod.GET)
 	public ModelAndView register(@RequestParam(value = "email") String email) {
 		System.out.println("got an email: "+email);
