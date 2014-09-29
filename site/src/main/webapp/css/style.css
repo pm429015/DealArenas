@@ -4229,7 +4229,7 @@ button[disabled]:hover,input[disabled]:hover {
 	margin-bottom: 30px;
 }
 
-#seller_steps{
+.seller_steps{
 	margin-top: 50px;
 }
 
@@ -4237,5 +4237,7 @@ button[disabled]:hover,input[disabled]:hover {
 	text-align: center;
 }
 
-
+#seller_home_faq, #seller_home_contact{
+	color:black;
+}
 

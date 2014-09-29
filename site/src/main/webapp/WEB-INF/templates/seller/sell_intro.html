@@ -11,23 +11,78 @@
 			<span th:text="#{sellhome.start}">start</span>
 		</button>
 	</div>
-	
+
 	<hr width="60%" class="col-md-10 col-md-offset-1" />
-	
-	<div id="seller_steps">
-		<h2 class="centering col-md-12"><span th:text="#{sellhome.guild}">list guild</span></h2>
-		<div class="col-md-4 ">
-			<img th:src="@{/img/seller_home/paper90.png}" alt="Seller Step 1" />
+
+	<div class="seller_steps">
+
+		<h1 class="centering col-md-12">
+			<span th:text="#{sellhome.guild}">list guild</span>
+		</h1>
+	</div>
+	<div class="row">
+		<div class="col-md-11 col-md-offset-1 seller_steps">
+			<div class="col-md-3">
+				<img th:src="@{/img/seller_home/list2.png}" alt="Seller Step 1" />
+			</div>
+			<div class="col-md-8">
+				<h3>
+					<span th:text="#{sellhome.step1}">step 1</span>
+				</h3>
+			</div>
 		</div>
 
-		<div class="col-md-8 ">
-			<h2>Apple</h2>
+		<div class="col-md-11 col-md-offset-1 seller_steps">
+			<div class="col-md-3">
+				<img th:src="@{/img/seller_home/delivery.png}" alt="Seller Step 2" />
+			</div>
+			<div class="col-md-8">
+				<h3>
+					<span th:text="#{sellhome.step2}">step 2</span>
+				</h3>
+			</div>
 		</div>
+
+		<div class="col-md-11 col-md-offset-1 seller_steps">
+			<div class="col-md-3">
+				<img th:src="@{/img/seller_home/goods.png}" alt="Seller Step 3" />
+			</div>
+			<div class="col-md-8">
+				<h3>
+					<span th:text="#{sellhome.step3}">step 3</span>
+				</h3>
+			</div>
+		</div>
+
+		<div class="col-md-11 col-md-offset-1 seller_steps">
+			<div class="col-md-3">
+				<img th:src="@{/img/seller_home/checkout.png}" alt="Seller Step 4" />
+			</div>
+			<div class="col-md-8">
+				<h3>
+					<span th:text="#{sellhome.step4}">step 4</span>
+				</h3>
+			</div>
+		</div>
+
+
 	</div>
-	
-	
-	
-	<div id="seller_start">
+
+
+
+	<div id="seller_start" class="col-md-12">
+		<h4>
+			<span th:text="#{sellhome.questions}">FAQ</span>
+			
+			<u><a
+				id="seller_home_faq" th:href="@{/seller_FAQ}"
+				onClick="ga('send', 'event', { eventCategory: 'seller-faq', eventAction: 'click'});"><span
+				th:text="#{home.seller.faq}">seller faq</span></a></u>
+			<span
+				th:text="#{sellhome.askus}">FAQ</span>
+			<a id="seller_home_contact" href="mailto:dealarenas@gmail.com"><span th:text="#{footer.customerService}"></span></a>
+		</h4>
+
 		<button type="button" class="btn btn-danger btn-xlarge">
 			<span th:text="#{sellhome.start}">start</span>
 		</button>

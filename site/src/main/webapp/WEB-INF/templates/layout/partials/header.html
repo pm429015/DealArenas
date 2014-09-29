@@ -17,7 +17,7 @@
                         <a href="#buy" class="navbar-texts" onClick="ga('send', 'event', { eventCategory: 'buy-scroll', eventAction: 'click'});"><span th:text="#{home.buy}">Buy</span></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#sell" onClick="ga('send', 'event', { eventCategory: 'sell-scroll', eventAction: 'click'});"><span th:text="#{home.sell}">sell</span></a>
+                        <a th:href="@{/seller_home}" onClick="ga('send', 'event', { eventCategory: 'seller-start', eventAction: 'click'});"><span th:text="#{home.sell}">sell</span></a>
                     </li>
                    
                 
