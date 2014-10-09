@@ -12,4 +12,10 @@ public class SellController {
 		String message = "Hello World, Spring 3.0!!!";
 		return new ModelAndView("seller/sell_intro", "message", message);
 	}
+	
+	@RequestMapping("/seller_list")
+	public ModelAndView seller_list() {
+		String message = "Hello World, Spring 3.0!!!";
+		return new ModelAndView("seller/seller_list", "message", message);
+	}
 }

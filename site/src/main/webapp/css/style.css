@@ -4241,3 +4241,45 @@ button[disabled]:hover,input[disabled]:hover {
 	color:black;
 }
 
+/*Seller List*/
+.models{
+	margin-top: 30px;
+/* 	margin-bottom: 10px; */
+}
+
+.models img{
+	opacity: 0.3;
+    filter: alpha(opacity=30); /* For IE8 and earlier */
+}
+
+.models:hover img, .models:hover h3{
+	color: #0000FF;
+	opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+    font-weight: bold;
+}
+
+.models input[type="radio"]{
+/* 	display: none; */
+}
+
+.models input[type="radio"]:checked + img{
+	opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+#seller_price{
+	font-size: xx-large;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	color: #0000FF;
+}
+
+#sellerList_next1,#sellerList_next2{
+	text-align: center;
+	margin-top: 30px;
+}
+
+#paid_panel{
+	margin-top: 50px;
+}
