@@ -21,3 +21,21 @@ admin/target/admin/WEB-INF/classes/rebel.xml
 */lib/jrebel/licensing.info
 
 admin/target/admin/WEB-INF/classes/rebel.xml
+
+*.war
+
+admin/target/*
+
+admin/target/admin/META-INF/context.xml
+
+admin/target/admin/WEB-INF/blc-example.keystore
+
+admin/target/admin/WEB-INF/jetty-env.xml
+
+*.jar
+
+admin/target/m2e-wtp/web-resources/META-INF/maven/com.mycompany/admin/pom.xml
+
+admin/target/admin/WEB-INF/lib/core-1.0.jar
+
+admin/target/maven-archiver/pom.properties
