@@ -93,7 +93,7 @@
     <target name="start-db">
         <!-- Grab the HSQLDB jar and add it to the classpath -->
         <artifact:dependencies filesetId="warDeps">
-            <dependency groupId="org.hsqldb" artifactId="hsqldb" version="2.3.1" />
+            <dependency groupId="mysql" artifactId="mysql-connector-java" version="5.1.26" />
         </artifact:dependencies>
         <path id="build.runtime.classpath">
             <fileset refid="warDeps"/>
@@ -107,21 +107,19 @@
 
     <target name="stop-db">
         <echo message="Execute SQL on new Data Base..." />
-    	<!-- Grab the HSQLDB jar and add it to the classpath -->
+    	<!-- Grab the Mysql jar and add it to the classpath -->
         <artifact:dependencies filesetId="warDeps">
-            <dependency groupId="org.hsqldb" artifactId="hsqldb" version="2.3.1" />
+            <dependency groupId="mysql" artifactId="mysql-connector-java" version="5.1.26" />
         </artifact:dependencies>
         <path id="build.runtime.classpath">
             <fileset refid="warDeps"/>
         </path>
         <sql
-            autocommit="true"
-            print="true"
-            classpathref="build.runtime.classpath"
-            driver="org.hsqldb.jdbcDriver"
-            url="jdbc:hsqldb:hsql://localhost/broadleaf;ifexists=true"
-            userid="sa"
-            password="">
+            
+            driver="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://localhost:3306/broadleaf"
+            userid="root"
+            password="833069237">
             <transaction>SHUTDOWN</transaction>
         </sql>
         <echo message="SQL Executed on data base..." />
