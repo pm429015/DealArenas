@@ -1,34 +1,36 @@
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 <!--     <title th:unless="${pageTitle == 'TEMPLATE'}" th:text="${#strings.isEmpty(pageTitle) ? 'Broadleaf Demo - Heat Clinic' : pageTitle}"></title> -->
-    <title th:unless="${pageTitle == 'TEMPLATE'}" th:text="#{name}"></title>
-    
-    <title th:if="${pageTitle == 'TEMPLATE'}" th:remove="tag">
-        <title th:inline="text" th:include="${templateName} :: title" />
-    </title>
-    
-    <meta name="description" content="二手競技場 - 一個追求安全簡單又快速的手機二手拍賣平台，買賣二手iphone首選平台，二手手機拍賣首選平台" />
-<!--     <meta name="keywords" content="二手競技場,手機二手,二手拍賣,中古手機,二手手機, 二手iphone"> -->
-    <!-- <meta name="description" content="追求一個安全簡單又快速的2手機拍賣平台，2手競技場讓你享受更好的2手機買賣體驗" />-->
-<!--     <meta name="author" content="Broadleaf Commerce" /> -->
+<title th:unless="${pageTitle == 'TEMPLATE'}" th:text="#{name}"></title>
 
-    <meta content='width=device-width; initial-scale=1.0;maximum-scale=1.0; user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-		th:href="@{//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css}"
-		rel="stylesheet"></link>
-	<link rel="shortcut icon" th:href="@{/img/icon.ico}"></link>
-    <blc:bundle name="style.css" 
-                mapping-prefix="/css/"
-                files="style.css,footer.css,nav.css,home.css,
+<title th:if="${pageTitle == 'TEMPLATE'}" th:remove="tag">
+	<title th:inline="text" th:include="${templateName} :: title" />
+</title>
+
+<meta name="description"
+	content="二手競技場 - 一個追求安全簡單又快速的手機二手拍賣平台，買賣二手iphone首選平台，二手手機拍賣首選平台" />
+<meta name="title"
+	content="二手競技場 - 一個追求安全簡單又快速的手機二手拍賣平台，買賣二手iphone首選平台，二手手機拍賣首選平台" />
+
+<meta
+	content='width=device-width; initial-scale=1.0;maximum-scale=1.0; user-scalable=0'
+	name='viewport' />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="geo.region" content="TW" />
+<link th:href="@{//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css}" rel="stylesheet"></link>
+<link rel="shortcut icon" th:href="@{/img/icon.ico}"></link>
+<blc:bundle name="style.css" mapping-prefix="/css/"
+	files="style.css,footer.css,nav.css,home.css,
                        jquery.rating.css" />
-    
-    <link rel="stylesheet" th:unless="${#strings.isEmpty(additionalCss)}" />
-    
 
-    <script src="../../js/libs/modernizr-2.5.3.min.js" th:src="@{/js/libs/modernizr-2.5.3.min.js}"></script>
-    <script
-		src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    
-    <blc:google_universal_analytics ordernumber="${order?.orderNumber}" />
+<link rel="stylesheet" th:unless="${#strings.isEmpty(additionalCss)}" />
+
+
+<script src="../../js/libs/modernizr-2.5.3.min.js"
+	th:src="@{/js/libs/modernizr-2.5.3.min.js}"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<blc:google_universal_analytics ordernumber="${order?.orderNumber}" />
