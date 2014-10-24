@@ -54,7 +54,7 @@
 	<bean id="blEmailInfo"
 		class="org.broadleafcommerce.common.email.service.info.EmailInfo">
 		<property name="fromAddress">
-			<value>support@mycompany.com</value>
+			<value>dealarenas@gmail.com</value>
 		</property>
 		<property name="sendAsyncPriority">
 			<value>2</value>

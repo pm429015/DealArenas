@@ -52,7 +52,8 @@ html,button,input,select,textarea {
 body {
 	margin: 0;
 	font: 12px/18px "Helvetica Neue",Arial,"Heiti TC","LiHei Pro","Microsoft Jhenghei",sans-serif;
-	background: #F0FFF0 !important;
+/* 	background: #F0FFF0 !important; */
+background: url(../img/canvas.jpg) repeat;
 }
 
 ::-moz-selection {
@@ -859,20 +860,20 @@ header .intro-text .name {
 }
 #account {
 	margin-top: 30px;
-	font-size: 12px;
+	font-size: 15px;
 	display: block;
 }
 
-#account h3 {
-	font: 16px/18px 'Open Sans', Helvetica, sans-serif;
+#account h2 {
+	font: 'Open Sans', Helvetica, sans-serif;
 	font-weight: 600;
 	margin: 0 0 5px 0;
 	padding: 0;
 }
 
-#account #register,#account #login,#account #forgotPassword,#account #resetPassword,#contactus
+#account #register,#account #login,#account #forgotPassword,#account #resetPassword
 	{
-	width: 282px;
+/* 	width: 282px; */
 	margin: 10px auto;
 	padding: 20px;
 	background: url('../img/sidebarbg.jpg') repeat;
