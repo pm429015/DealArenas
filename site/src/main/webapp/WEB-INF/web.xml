@@ -24,6 +24,7 @@
             /WEB-INF/applicationContext-filter.xml
             /WEB-INF/applicationContext-workflow.xml
             /WEB-INF/applicationContext.xml
+            /WEB-INF/applicationContext-payment.xml
         </param-value>
     </context-param>
 

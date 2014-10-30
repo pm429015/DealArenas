@@ -15,7 +15,8 @@
 		<section id="left_column" th:object="${product}">
 
 			<div id="product_content" class="product_container">
-				<h2 th:text="*{name}"></h2>
+				<h1 th:text="*{name}"></h1>
+				<h3 th:text="*{model}"></h3>
 
 				<div id="maker" th:text="*{manufacturer}"></div>
 
@@ -42,6 +43,7 @@
 					th:with="checkInventory=*{defaultSku.inventoryType?.type == 'CHECK_QUANTITY'},
                                    availableInventory=${checkInventory ? #object.defaultSku.quantityAvailable != null and #object.defaultSku.quantityAvailable != 0 : true},
                                    inCart=${cart.containsSku(#object.defaultSku) and #lists.isEmpty(product.productOptions)}">
+                                   
 					<blc:form method="POST" th:action="@{/cart/add}">
 						<div class="product-option-nonjs"
 							th:each="productOption : *{productOptions}"
@@ -57,14 +59,14 @@
 
 						
 
-						<div id="inventory" th:if="${checkInventory}">
-							<b>Available inventory:</b> <span
-								th:text="*{defaultSku.quantityAvailable == null ? '0' : defaultSku.quantityAvailable}" />
-							<div th:if="${!availableInventory}" class="out_of_stock">
-								<a disabled="disabled" class="big-button gray-button">Out of
-									Stock</a>
-							</div>
-						</div>
+<!-- 						<div id="inventory" th:if="${checkInventory}"> -->
+<!-- 							<b>Available inventory:</b> <span -->
+<!-- 								th:text="*{defaultSku.quantityAvailable == null ? '0' : defaultSku.quantityAvailable}" /> -->
+<!-- 							<div th:if="${!availableInventory}" class="out_of_stock"> -->
+<!-- 								<a disabled="disabled" class="big-button gray-button">Out of -->
+<!-- 									Stock</a> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
 
 						<div th:class="*{'productActions' + id}">
 							<div class="in_cart" th:classappend="${!inCart}? ' hidden'">
@@ -170,7 +172,9 @@
 			
 			<div class="col-md-12">
 				<div th:utext="*{longDescription}" id="description"></div>
+				<p id="demo"></p>
 			</div>
+			
 			<!--             <div class="clearfix"></div> -->
 			<!--                 <div id="customer-reviews-container"> -->
 			<!--                     <blc:ratings itemId="${product.id}" /> -->
@@ -265,23 +269,23 @@
 			<!--                 </div>           -->
 		</section>
 
-		<section id="right_column">
-			<header>Featured Products</header>
-			<div id="options">
-				<div class="section">
-					<blc:related_products productId="${product.id}" />
-					<ul id="featured_products" class="group">
-						<li th:each="relatedProduct : ${relatedProducts}"
-							th:object="${relatedProduct.relatedProduct}"
-							th:include="catalog/partials/productListItem"
-							class="product_container"></li>
-					</ul>
-				</div>
-			</div>
-		</section>
+<!-- 		<section id="right_column"> -->
+<!-- 			<header>Featured Products</header> -->
+<!-- 			<div id="options"> -->
+<!-- 				<div class="section"> -->
+<!-- 					<blc:related_products productId="${product.id}" /> -->
+<!-- 					<ul id="featured_products" class="group"> -->
+<!-- 						<li th:each="relatedProduct : ${relatedProducts}" -->
+<!-- 							th:object="${relatedProduct.relatedProduct}" -->
+<!-- 							th:include="catalog/partials/productListItem" -->
+<!-- 							class="product_container"></li> -->
+<!-- 					</ul> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</section> -->
 	</div>
 
 	<footer th:substituteby="layout/partials/footer" />
-
+	<script src="../../js/home.js" th:src="@{/js/product.js}"></script>
 </body>
 </html>

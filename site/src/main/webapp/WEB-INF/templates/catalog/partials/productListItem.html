@@ -23,7 +23,8 @@
 
 <div class="content">
 	<div class="title" th:text="*{name}"></div>
-	<p th:utext="*{longDescription}"></p>
+	<div class="title" th:text="*{model}"></div>
+<!-- 	<p th:utext="*{longDescription}"></p> -->
 </div>
 
 <div th:class="*{'productActions productActions' + id}"
