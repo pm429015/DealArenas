@@ -15,8 +15,6 @@ site/solrhome
 combined/data/
 combined/solrhome
 *.error
-<<<<<<< HEAD
-=======
 */.DS_Store
 admin/target/m2e-wtp/web-resources/META-INF/MANIFEST<MF
 admin/target/admin/WEB-INF/classes/rebel.xml
@@ -41,4 +39,3 @@ admin/target/m2e-wtp/web-resources/META-INF/maven/com.mycompany/admin/pom.xml
 admin/target/admin/WEB-INF/lib/core-1.0.jar
 
 admin/target/maven-archiver/pom.properties
->>>>>>> 137848f4221974be04044192a71535e61fe7f25f

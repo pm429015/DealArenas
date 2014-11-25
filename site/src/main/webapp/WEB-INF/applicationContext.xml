@@ -189,17 +189,10 @@
     <!-- The second bean registers the dialct to the blWebTemplateEngine -->
     <!-- Note that the same thing could be done for the blEmailTemplateEngine -->
     <!-- 
-<<<<<<< HEAD
-    <bean id="myDialect" class="DealArenas.com.common.web.dialect.MyDialect">
-        <property name="processors">
-          <set>
-            <bean class="DealArenas.com.common.web.processor.MyProcessor" />
-=======
     <bean id="myDialect" class="com.mycompany.common.web.dialect.MyDialect">
         <property name="processors">
           <set>
             <bean class="com.mycompany.common.web.processor.MyProcessor" />
->>>>>>> 137848f4221974be04044192a71535e61fe7f25f
           </set>
         </property>     
     </bean> 

@@ -47,11 +47,7 @@
                 </bean>
 
                 <!-- This activity should occur at the very end of the checkout workflow, after everything has been executed -->
-<<<<<<< HEAD
-                <bean p:order="9999999" class="DealArenas.com.worklow.checkout.SendOrderConfirmationEmailActivity" />
-=======
                 <bean p:order="9999999" class="com.mycompany.worklow.checkout.SendOrderConfirmationEmailActivity" />
->>>>>>> 137848f4221974be04044192a71535e61fe7f25f
             </list>
         </property>
     </bean>
