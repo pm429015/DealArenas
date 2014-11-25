@@ -20,26 +20,37 @@ package com.mycompany.controller.payment;
 import java.util.Set;
 
 import org.broadleafcommerce.core.web.controller.cart.BroadleafCartController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.mycompany.payment.allpay.AllPayConfigureation;
 import com.mycompany.payment.allpay.AllPayConfigureationService;
+import com.mycompany.payment.allpay.ReturnPaymentParams;
 
 @Controller
 public class AllPayController extends BroadleafCartController {
-    
+	private static final Logger logger = LoggerFactory.getLogger(AllPayController.class);
 	AllPayConfigureationService allpayService = new AllPayConfigureationService();
 	
-	@RequestMapping("/allpay")
+	@RequestMapping("allpay_pay")
 	public ModelAndView allpayForm() {
+		logger.warn("Start allpay test");
+		
 		ModelAndView model = new ModelAndView();
 		model.addObject("action", allpayService.getAllPayConfig().getServiceURL());
 		model.addObject("argMap",allpayService.checkOutMap());
 		model.setViewName("content/allpay");
 		return model;
 	}
-    
+	
+	@RequestMapping(value = "allpay_receive", method = RequestMethod.POST)
+	public String allPayResultBack(ReturnPaymentParams params){
+		logger.warn(params.getMerchantID());
+		
+		return "content/allpayReturnSuccess";
+	}
 }

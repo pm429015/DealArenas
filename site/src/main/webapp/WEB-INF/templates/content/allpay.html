@@ -4,9 +4,25 @@
 	<div>
 		<form id="allpayForm" method="post" th:action="*{action}">
 			<input type='hidden' th:each="arg :${argMap}" th:name="${arg.key}" th:value="${arg.value}"/>
-			<input type="submit" id="__paymentButton" value="submit" />
+			<input type="submit" id="__paymentButton" value="Let's GO Pay Now" />
 		</form>
 	</div>
+	
+	<form action="allpay_receive" method="POST">
+		MerchantID: <input type="text" name="MerchantID" value="Mickey"/>
+		MerchantTradeNo: <input type="text" name="MerchantTradeNo" value="000"/>
+		RtnCode: <input type="text" name="RtnCode" value="1"/>
+		RtnMsg: <input type="text" name="RtnMsg" value="Success"/>
+		TradeNo:<input type="text" name="TradeNo" value="005"/>
+		TradeAmt: <input type="text" name="TradeAmt" value="100"/>
+		ChargeFee: <input type="text" name="ChargeFee" value="5"/>
+		PaymentDate: <input type="text" name="PaymentDate" value="2014/11/25 11:11:11"/>
+		TradeDate: <input type="text" name="TradeDate" value="2014/11/25 11:10:11"/>
+		PaymentType: <input type="text" name="PaymentType" value="0"/>
+		SimulatePaid: <input type="text" name="SimulatePaid" value="1"/>
+		<input type="submit" value="Send POST to the Server"/>
+		
+	</form>
 
 </div>
 

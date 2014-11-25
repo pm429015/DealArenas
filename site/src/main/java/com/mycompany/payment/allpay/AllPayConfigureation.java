@@ -30,7 +30,7 @@ public class AllPayConfigureation {
 		send.put("ClientBackURL", "");
 		send.put("OrderResultURL", "");
 		
-		send.put("MerchantTradeNo", "DA0003");
+		send.put("MerchantTradeNo", "DA0005");
 		send.put("MerchantTradeDate", "2014/11/11 11:40:18");
 		send.put("PaymentType", "aio");
 		send.put("TotalAmount", "100");
