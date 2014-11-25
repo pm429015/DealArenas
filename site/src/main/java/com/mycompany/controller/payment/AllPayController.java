@@ -50,6 +50,7 @@ public class AllPayController extends BroadleafCartController {
 	@RequestMapping(value = "allpay_receive", method = RequestMethod.POST)
 	public String allPayResultBack(ReturnPaymentParams params){
 		logger.warn(params.getMerchantID());
+		logger.warn(params.getMerchantTradeNo());
 		
 		return "content/allpayReturnSuccess";
 	}

@@ -4,7 +4,7 @@
 	<div>
 		<form id="allpayForm" method="post" th:action="*{action}">
 			<input type='hidden' th:each="arg :${argMap}" th:name="${arg.key}" th:value="${arg.value}"/>
-			<input type="submit" id="__paymentButton" value="Let's GO Pay Now" />
+			<input type="submit" id="__paymentButton" value="GO Pay Now" />
 		</form>
 	</div>
 	
