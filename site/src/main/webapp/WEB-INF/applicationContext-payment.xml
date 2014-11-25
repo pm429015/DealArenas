@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+        
+<!-- 	<bean id="allPayConfigConfig" class="com.mycompany.payment.allpay.AllPayConfigureation"> -->
+	
+<!-- 		<property name="serviceURL"> -->
+<!-- 			<value>http://payment-stage.allpay.com.tw/Cashier/AioCheckOut</value> -->
+<!-- 		</property> -->
+		
+<!-- Real Key: CTndV9zqQrIjbbA9 --> 
+<!-- Real IV: tKGaXZaQ860owP0n --> 
+
+<!-- Test Key:5294y06JbISpM5x9 --> 
+<!-- Test IV:v77hoKGq4kWxNNIS --> 
+
+<!-- 		<property name="hashKey"> -->
+<!-- 			<value>5294y06JbISpM5x9</value> -->
+<!-- 		</property> -->
+		
+<!-- 		<property name="hashIV"> -->
+<!-- 			<value>v77hoKGq4kWxNNIS</value> -->
+<!-- 		</property> -->
+		
+<!-- 		<property name="merchantID"> -->
+<!-- 			<value>2000132</value> -->
+<!-- 		</property> -->
+		
+<!-- 		<property name="paymentType"> -->
+<!-- 			<value>aio</value> -->
+<!-- 		</property> -->
+		
+<!-- 		<property name="choosePayment"> -->
+<!-- 			<value>ALL</value> -->
+<!-- 		</property> -->
+		
+<!-- 		<property name="chooseSubPayment"> -->
+<!-- 			<value>None</value> -->
+<!-- 		</property> -->
+		
+<!-- 		<property name="needExtraPaidInfo"> -->
+<!-- 			<value>No</value> -->
+<!-- 		</property> -->
+		
+<!-- 		<property name="deviceSource"> -->
+<!-- 			<value>PC</value> -->
+<!-- 		</property> -->
+		
+<!-- 		<property name="actionType"> -->
+<!-- 			<value>C</value> -->
+<!-- 		</property> -->
+		
+<!-- 	</bean> -->
+	
+
+
+</beans>

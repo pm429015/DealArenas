@@ -1,0 +1,34 @@
+
+Starting session: Wed Apr 09 11:07:20 CST 2014
+[11:07:20] ----------------------------------------
+[11:07:20] Getting current license...
+[11:07:20] Received SDKLicenseInfo object:
+[11:07:20] isValid(): true
+[11:07:20] getValidFrom(): null
+[11:07:20] getValidUntil(): null
+[11:07:20] getEMail(): null
+[11:07:20] getUid(): anonymous-user
+[11:07:20] getLicenseeName(): anonymous-user
+[11:07:20] getLicenseeOrganization(): anonymous-user
+[11:07:20] getAdditionalInfo(): ####### Cracked by anonymous-user, For FUN! Unlimited! Enjoy! ######
+[11:07:20] isOfflineLease(): false
+[11:07:20] getLicenseLocation(): file:/D:/Java/jrebel/jrebel.lic
+[11:07:20] getLicenseFile(): D:\Java\jrebel\jrebel.lic
+[11:07:20] getLicenseType(): 4
+[11:07:20] getErrorMessage(): 
+[11:07:39] ----------------------------------------
+[11:07:39] Activating with file: D:\Java\jrebel\jrebel.lic
+[11:07:39] Received SDKLicenseInfo object:
+[11:07:39] isValid(): true
+[11:07:39] getValidFrom(): null
+[11:07:39] getValidUntil(): null
+[11:07:39] getEMail(): null
+[11:07:39] getUid(): anonymous-user
+[11:07:39] getLicenseeName(): anonymous-user
+[11:07:39] getLicenseeOrganization(): anonymous-user
+[11:07:39] getAdditionalInfo(): ####### Cracked by anonymous-user, For FUN! Unlimited! Enjoy! ######
+[11:07:39] isOfflineLease(): false
+[11:07:39] getLicenseLocation(): file:/D:/Java/jrebel/jrebel.lic
+[11:07:39] getLicenseFile(): D:\Java\jrebel\jrebel.lic
+[11:07:39] getLicenseType(): 4
+[11:07:39] getErrorMessage(): 

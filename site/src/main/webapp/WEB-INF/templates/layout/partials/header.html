@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <header>
     <div id="header_content">
         <div id="cart_info">
@@ -68,3 +69,76 @@
         </div>
     </div>
 </header>
+=======
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header page-scroll">
+			<!-- 			<button type="button" class="navbar-toggle" data-toggle="collapse" -->
+			<!-- 				data-target=".navbar-main-collapse"> -->
+			<!-- 				<i class="fa fa-bars"></i> -->
+			<!-- 			</button> -->
+			<a class="navbar-brand" th:href="@{/}" id="brand"> <i
+				class="fa fa-play-circle"></i><span class="light"
+				th:text="#{home.brand}">DealArenas</span>
+			</a>
+
+
+		</div>
+		<!-- navbar-header -->
+		<div class="collapse navbar-collapse navbar-main-collapse">
+
+			<ul class="nav navbar-nav navbar-left">
+				<li class="page-scroll"><a th:href="@{/}" class="navbar-texts"
+					onClick="ga('send', 'event', { eventCategory: 'buy-scroll', eventAction: 'click'});"><span
+						th:text="#{home.buy}">Buy</span></a></li>
+				<li class="page-scroll"><a th:href="@{/seller_home}"
+					onClick="ga('send', 'event', { eventCategory: 'seller-start', eventAction: 'click'});"><span
+						th:text="#{home.sell}">sell</span></a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<div th:if="${customer.anonymous}" th:remove="tag">
+					<li class="page-scroll">
+						<a class="account" th:href="@{/login}" onClick="ga('send', 'event', { eventCategory: 'log_in', eventAction: 'click'});">
+							<span th:text="#{home.login}">Login</span>
+						</a>
+					</li>
+					<li class="page-scroll">
+						<a class="account" th:href="@{/register}" onClick="ga('send', 'event', { eventCategory: 'register', eventAction: 'click'});">
+                    		<span th:text="#{home.register}">Register</span>
+                		</a>
+					</li>
+				</div>
+
+				<div th:unless="${customer.anonymous}" th:remove="tag">
+					<li class="page-scroll">
+						 
+						<a class="my-account" th:href="@{/account}" onClick="ga('send', 'event', { eventCategory: 'customers_area', eventAction: 'click'});">
+ 							<span th:text="#{home.account}">Account</span><!-- <span th:text="${customer.firstName}">customer name</span> -->
+						</a>
+					</li>
+				
+					<li class="page-scroll">
+						<a th:href="@{/logout}" onClick="ga('send', 'event', { eventCategory: 'log_out', eventAction: 'click'});">
+                    		<span th:text="#{home.logout}">Logout</span>
+                		</a>
+					</li>
+				</div>
+				
+				<li class="page-scroll">
+					<a id="cartLink" class="modalcart" th:href="@{/cart}">
+		                <img th:src="@{/img/shopping_cart.png}" alt="Shopping Cart Icon" />
+		                <span id="headerCartItemWordSingular_i18n" style="display: none;" th:text="#{home.item}" />
+		                <span id="headerCartItemWordPlural_i18n" style="display: none;" th:text="#{home.items}" />
+<!-- 		                <span class="headerCartItemsCount" th:text="${cart.itemCount}" /> -->
+		                <span class="headerCartItemsCountWord" th:text="#{home.item}" />
+		                
+		            </a>
+				</li>
+
+			</ul>
+		</div>
+		<!-- collapse -->
+	</div>
+	<!-- container -->
+</nav>
+>>>>>>> 137848f4221974be04044192a71535e61fe7f25f

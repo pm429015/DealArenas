@@ -4,7 +4,11 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
          http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID">
 
+<<<<<<< HEAD
     <display-name>com</display-name>
+=======
+    <display-name>mycompany</display-name>
+>>>>>>> 137848f4221974be04044192a71535e61fe7f25f
 
     <context-param>
         <param-name>webAppRootKey</param-name>
@@ -24,6 +28,10 @@
             /WEB-INF/applicationContext-filter.xml
             /WEB-INF/applicationContext-workflow.xml
             /WEB-INF/applicationContext.xml
+<<<<<<< HEAD
+=======
+            /WEB-INF/applicationContext-payment.xml
+>>>>>>> 137848f4221974be04044192a71535e61fe7f25f
         </param-value>
     </context-param>
 
@@ -88,7 +96,11 @@
          from the Broadleaf CMS such as images. It will match on any URL that contains the static asset
          prefix URL in any depth of it. -->
     <servlet>
+<<<<<<< HEAD
         <servlet-name>com</servlet-name>
+=======
+        <servlet-name>mycompany</servlet-name>
+>>>>>>> 137848f4221974be04044192a71535e61fe7f25f
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
@@ -101,7 +113,11 @@
     </servlet>
     
     <servlet-mapping>
+<<<<<<< HEAD
         <servlet-name>com</servlet-name>
+=======
+        <servlet-name>mycompany</servlet-name>
+>>>>>>> 137848f4221974be04044192a71535e61fe7f25f
         <url-pattern>/</url-pattern>
     </servlet-mapping>
     
@@ -126,7 +142,11 @@
     <env-entry>
         <env-entry-name>appName</env-entry-name>
         <env-entry-type>java.lang.String</env-entry-type>
+<<<<<<< HEAD
         <env-entry-value>comSite</env-entry-value>
+=======
+        <env-entry-value>mycompanySite</env-entry-value>
+>>>>>>> 137848f4221974be04044192a71535e61fe7f25f
     </env-entry>
     
 </web-app>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div id="account">  
     <div style="display:none;" th:fragment="title" th:inline="text">Contact Us - Broadleaf Demo - Heat Clinic</div>
     
@@ -21,4 +22,43 @@
 	  </blc:form>
         </div>
     </div>
+=======
+<div id="account">
+	<div style="display: none;" th:fragment="title" th:inline="text">與我們聯絡 - 二手競技場</div>
+<!-- 	<div class="row"> -->
+		<div id="contactus">
+			<div class="col-md-12">
+				<h2><span th:text="#{contact_us.header}">Leave Us A Message</span></h2>
+			</div>
+			<div class="clearfix">
+				<blc:form id="contactUsForm" th:action="@{/contactus/success}"
+					method="post">
+					<div class="col-md-12">
+						<div class="form50">
+							<h3 for="name"><span th:text="#{contact_us.name}">Name</span></h3> <input type="text" name="name"
+								class="field50" />
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form50">
+							<h3 for="emailAddress"><span th:text="#{contact_us.email}">Email</span></h3> <input type="email"
+								name="emailAddress" class="field50" />
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div >
+							<h3 for="comments"><span th:text="#{contact_us.message}">Message</span></h3>
+							<textarea type="text" name="comments" />
+						</div>
+					</div>
+					<div class="login_register btn pull-right">
+						<input class="submit big red " type="submit" value="送出" />
+					</div>
+				</blc:form>
+			</div>
+		</div>
+
+<!-- 	</div> -->
+	<!-- row -->
+>>>>>>> 137848f4221974be04044192a71535e61fe7f25f
 </div>

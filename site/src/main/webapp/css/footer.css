@@ -1,0 +1,117 @@
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+	footer {
+		background: none;
+		width: 320px;
+		height: 150px;
+		padding: 0;
+		margin: 25px 0;
+		float: left;
+		display: block;
+	}
+	footer #blc_brand {
+		background: none;
+		text-align: center;
+		margin: 20px 0 0;
+		padding: 0;
+	}
+}
+
+/* =============================================================================
+    For iPad tablets in portait orientation
+   ========================================================================== */
+@media only screen and (width : 768px) and (orientation:portrait) {
+	footer #blc_brand {
+		padding-left: 525px;
+	}
+	footer #left_content,footer #right_content {
+		display: none;
+	}
+}
+
+/* ===== Primary Styles ========================================================
+   Author: chris
+   ========================================================================== */
+footer {
+	margin: 40px auto;
+	padding: 0 20px;
+	padding-bottom: 40px;
+	font: 12px/16px;
+	color: #655c5a;
+	width:100%;
+}
+
+footer #left_content h4,footer #right_content h4 {
+	font: 12px/17px;
+	font-weight: 600;
+	letter-spacing: 5px;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	color: #262322;
+}
+
+footer #left_content {
+	width: 405px;
+	text-align: right;
+	float: left;
+}
+
+footer #right_content {
+	width: 400px;
+	text-align: left;
+	float: right;
+}
+
+footer #blc_brand {
+	display: block;
+	height: 60px;
+	text-align: left;
+	font: 10px/13px;
+	padding: 10px 0 0 521px;
+	margin: 100px 0 0 -200px;
+}
+
+footer #blc_brand img {
+	display: inline-block;
+}
+
+footer #blc_brand p {
+	display: block;
+	margin: -20px 0 0 100px;
+}
+
+footer #blc_brand h4,footer #blc_brand a {
+	font: 10px/15px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #262322;
+	text-decoration: none;
+	display: inline-block;
+}
+
+footer .nav-pills {
+	margin: 0px;
+	font-size: 13px;
+	display: inline-block;
+}
+
+footer .copyright {
+	padding: 10px 5px;
+	font-size: 18px;
+}
+
+footer a.nav_link {
+	color: #7f8c8d;
+	padding: 12px 5px;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+footer a.nav_link:hover {
+	background-color: #F0FFF0;
+	color: #d14;
+}

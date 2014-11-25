@@ -6,6 +6,10 @@
              
     <persistence-unit name="blPU" transaction-type="RESOURCE_LOCAL">
         <non-jta-data-source>jdbc/web</non-jta-data-source>
+<<<<<<< HEAD
+=======
+        <class>com.mycompany.profile.core.domain.HCCustomerImpl</class>
+>>>>>>> 137848f4221974be04044192a71535e61fe7f25f
         <exclude-unlisted-classes/>
     </persistence-unit>
     

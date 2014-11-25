@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head th:include="/layout/partials/head (pageTitle='Broadleaf Demo - Heat Clinic')">
+	</head>
+
+<body>
+
+	<div id="notification_bar"></div>
+
+	<header th:substituteby="layout/partials/header" />
+	
+	<!-- Header -->
+    <section id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                	
+                    <div class="intro-text">
+                    	<h2><span class="name" th:text="#{home.header}"></span></h2>
+                    	<img class="img-responsive" th:src="@{/img/home/landing.png}" />
+<!--                     	<h3><span class="skills" th:text="#{home.desc}"></span></h3> -->
+                    </div>
+                    	
+                </div>
+                
+                <div class="col-md-4 col-md-offset-2 col-sm-12 buyer-btn" style="margin-top: 2%;">
+                	<a href="javascript:return false;"><input type="button" class="btn btn-primary btn-xlarge" th:value="#{home.buy}"/></a>
+                </div>
+                
+                <div class="col-md-4 col-sm-12 seller-btn" style="margin-top: 2%;">
+                	<a href="javascript:return false;"><input type="button" class="btn btn-danger btn-xlarge" th:value="#{home.sell}"/></a>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<section id="sell">
+	<div class="container">
+		<div id="content" class="group" role="main">
+
+			<div class="row" id="home_ads">
+				<div class="col-md-12 text-center">
+					<h1><span th:text="#{home.seller.title}"></span></h1>
+				</div>
+				
+				<div class="col-md-4 text-center">
+					<h3><span th:text="#{home.seller1}">30s list</span></h3>
+					<h4><span th:text="#{home.seller1.content}">30s list content</span></h4>
+					<img th:src="@{/img/home/sell_30s.png}" alt="Seller Step 1" />
+				</div>
+				
+				<div class="col-md-4 text-center">
+					<h3><span th:text="#{home.seller2}">ship </span></h3>
+					<h4><span th:text="#{home.seller2.content}"> shipping content</span></h4>
+					<img th:src="@{/img/home/sell_ship.png}" alt="Seller Step 2" />
+				</div>
+				
+				<div class="col-md-4 text-center">
+					<h3><span th:text="#{home.seller3}">Get paid</span></h3>
+					<h4><span th:text="#{home.seller3.content}">free shipping content</span></h4>
+					<img th:src="@{/img/home/Coins.png}" alt="Seller Step 3" />
+				</div>
+				
+				<div class="col-md-12 text-center" style='margin:11px auto;'>
+					<a th:href="@{/seller_home}" onClick="ga('send', 'event', { eventCategory: 'seller-start', eventAction: 'click'});">
+						<input type="button" class="btn btn-danger btn-xlarge" th:value="#{home.seller}"/>
+					</a>
+<!-- 					<blc:content contentType="Homepage Banner Ad" /> -->
+<!-- 					<div id="banners" -->
+<!-- 						th:if="${contentItem !=null and contentItem['targetUrl'] != null and contentItem['imageUrl'] != null}"> -->
+<!-- 						<a th:href="@{${contentItem['targetUrl']}}"><img -->
+<!-- 							th:src="@{${contentItem['imageUrl']}}" /></a> -->
+<!-- 					</div> -->
+				</div>
+				<!--  col-md-12 -->
+			</div><!-- row -->
+<!-- 			<nav th:substituteby="layout/partials/nav" /> -->
+
+<!-- 			<blc:content contentType="Homepage Middle Promo Snippet" /> -->
+
+<!-- 			<a th:href="@{/register}" -->
+<!-- 				th:if="${contentItem !=null and contentItem['htmlContent'] !=null}" -->
+<!-- 				style="text-decoration: none"> -->
+<!-- 				<div id="home_feature" th:utext="${contentItem['htmlContent']}"></div> -->
+<!-- 			</a> -->
+
+
+<!-- 			<blc:content contentType="Homepage Featured Products Title" /> -->
+<!-- 			<div -->
+<!-- 				th:if="${contentItem !=null and contentItem['messageText'] !=null}" -->
+<!-- 				class="title_bar" th:text="${contentItem['messageText']}"></div> -->
+
+<!-- 			<ul id="products" class="group"> -->
+<!-- 				<li th:each="product : ${products}" th:object="${product}" -->
+<!-- 					th:include="catalog/partials/productListItem" -->
+<!-- 					class="product_container"></li> -->
+<!-- 			</ul> -->
+		</div>
+	</div>
+	<!-- container-fluid -->
+	</section>
+	
+	<section id="buy">
+	<div class="container">	
+		<div id="content" class="group" role="main">
+			<div class="row" id="home_ads">
+				<div class="col-md-12 text-center">
+					<h1><span th:text="#{home.buyer.title}">Easy buy</span></h1>
+<!-- 					<blc:content contentType="Homepage Banner Ad" /> -->
+<!-- 					<div id="banners" -->
+<!-- 						th:if="${contentItem !=null and contentItem['targetUrl'] != null and contentItem['imageUrl'] != null}"> -->
+<!-- 						<a th:href="@{${contentItem['targetUrl']}}"><img -->
+<!-- 							th:src="@{${contentItem['imageUrl']}}" /></a> -->
+<!-- 					</div> -->
+				</div>
+				<!--  col-md-12 -->
+				<div class="col-md-6" >
+					<h3 class="text-center"><span th:text="#{home.buyer.guarantee.title}">guarantee title</span></h3>
+					<ul id="buyer_ads">
+						<li><h4><span th:text="#{home.buyer.guarantee1}">Our guarantee1</span></h4></li>
+						<li><h4><span th:text="#{home.buyer.guarantee2}">Our guarantee2</span></h4></li>
+						<li><h4><span th:text="#{home.buyer.guarantee3}">Our guarantee3</span></h4></li>
+						<li><h4><span th:text="#{home.buyer.guarantee4}">Our guarantee4</span></h4></li>
+					</ul>
+				</div><!--  col-md-6 -->
+				
+				<div class="col-md-5">
+					<img class="img-responsive" style='margin: 0 auto;' th:src="@{/img/home/verified.png}" alt="Buyer protection" />
+				</div><!--  col-md-6 -->
+				<div class="col-md-12 text-center" style='margin:10px auto;'>
+					<a th:href="@{/still_working}" onClick="ga('send', 'event', { eventCategory: 'buyer-start', eventAction: 'click'});">
+						<input type="button" class="btn btn-primary btn-xlarge" th:value="#{home.buyer}"/>
+					</a>
+				</div>
+			</div><!-- row -->
+		</div>
+	</div>
+	<!-- container-fluid -->
+	</section>
+	
+	<footer th:substituteby="layout/partials/footer" />
+	<script src="../../js/home.js" th:src="@{/js/home.js}"></script>
+</body>
+
+</html>

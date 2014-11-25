@@ -21,7 +21,11 @@
     <context:component-scan base-package="org.broadleafcommerce.profile.web.core.service.login"/>
 
     <!-- Scan DemoSite Sample Payment Gateway Implementation -->
+<<<<<<< HEAD
     <context:component-scan base-package="DealArenas.com.sample" />
+=======
+    <context:component-scan base-package="com.mycompany.sample" />
+>>>>>>> 137848f4221974be04044192a71535e61fe7f25f
 
     <!-- Turn on AOP annotations (required by Broadleaf) -->
     <aop:config/>
@@ -42,7 +46,11 @@
     </bean>
 
     <!-- Scan for custom controllers -->
+<<<<<<< HEAD
     <context:component-scan base-package="DealArenas.com.controller" />
+=======
+    <context:component-scan base-package="com.mycompany.controller" />
+>>>>>>> 137848f4221974be04044192a71535e61fe7f25f
     
     <!-- Allow annotation driven controllers -->
     <mvc:annotation-driven/>
@@ -97,6 +105,10 @@
                 <entry key="checkout/confirmation" value="layout/fullPageNoNavLayout" />
                 <entry key="layout/" value="NONE" />
                 <entry key="content/NONE" value="NONE" />
+<<<<<<< HEAD
+=======
+                <entry key="content/still_working" value="layout/fullPageNoNavLayout"/>
+>>>>>>> 137848f4221974be04044192a71535e61fe7f25f
             </map>
         </property>
     </bean>

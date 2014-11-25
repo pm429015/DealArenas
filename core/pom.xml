@@ -3,7 +3,11 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
+<<<<<<< HEAD
         <groupId>DealArenas.com</groupId>
+=======
+        <groupId>com.mycompany</groupId>
+>>>>>>> 137848f4221974be04044192a71535e61fe7f25f
         <artifactId>ecommerce-website</artifactId>
         <version>1.0</version>
     </parent>
