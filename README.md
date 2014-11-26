@@ -30,21 +30,22 @@
 1. ~~賣家+買賣家的FQA ( 1 week)~~
 	
 ####十月: 	
-1. 賣家商品登錄流程( 包括 登錄手機資訊 會員登入和註冊 等) 
+1. ~~賣家商品登錄流程( 包括 登錄手機資訊 會員登入和註冊 等) ~~
 
-2. 賣家帳號結合歐付寶 ( 1 + 2  大概 3 weeks)
+2.  ~~賣家無須結合歐付寶了 ~~
 
-3. 結合admin 網站 手機上架測試
+3. ~~結合admin 網站 手機上架測試~~
 
 ####十一月:
-1. 如果以上還沒做完  這個月把它完成
+1. 上架測試
+2. 購物車和買家歐付寶付款
+3. 買二手手機 做第一次的市場調查
 
-2. 規劃手機測試流程與測試結果頁面呈現 
 
 ####十二月:
-1. 規劃手機測試流程與測試結果頁面呈現 商城 ( 3 weeks )
+1. 買二手手機 做第一次的市場調查
 
-2. 購物車和買家歐付寶付款 (1 week)
+2. 購物車和買家歐付寶付款
 
 3. 測試 
 
@@ -90,4 +91,29 @@
 2. project import後左上角有個M表示project已經是maven project了，但我的狀況是porm.xml會少掉jdk.tools的dependency
 
 如果遇到此情況，請在porm.xml增加dependency，參考資料：http://forum.broadleafcommerce.org/viewtopic.php?f=14&t=2321
-																		
+																
+#### Deploy
+1. 到你的Eclipse 的Project 右鍵 maven clean & maven install
+
+2. commandline 登入server 備份舊的WAR 
+ >mv /home/stanley/bin/apache-tomcate-xxx/webapps/ROOT.war /home/stanley/bin/apache-tomcate-xxx/bk_war/ROOT_date.war
+
+3. 去找你的war 改名ROOT.war 然後複製到server來 
+>linux 範例 scp your/path/ROOT.war 128.199.183.209:/home/stanley/bin/apache-tomcat-7.0.54/webapps/ROOT.war
+
+4. Launch website
+   > sudo /home/stanley/bin/apache-tomcat-7.0.54/bin/startup.sh
+
+#### 啟動Mysql:
+看狀態 service mysql status
+停止   service mysql stop
+啟動   service mysql start
+
+#### 啟動phpmyadmin:
+啟動phpmyadmin需要apache2 可是apache2跟我們的網站使用同樣一個port:80 所以如果想要開啟phpmyadmin 可能需要關掉apache2
+>sudo /etc/init.d/apache2 stop
+
+
+
+
+
