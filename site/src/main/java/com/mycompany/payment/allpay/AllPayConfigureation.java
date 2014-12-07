@@ -4,11 +4,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AllPayConfigureation {
-	private String serviceURL ="http://payment-stage.allpay.com.tw/Cashier/AioCheckOut";
+	//正是資料
 	private String serviceMethod;
-	private String hashKey = "5294y06JbISpM5x9";
-	private String hashIV = "v77hoKGq4kWxNNIS";
-	private String merchantID ="2000132";
+	private String serviceURL ="https://payment.allpay.com.tw/Cashier/AioCheckOut";
+	private String hashKey = "CTndV9zqQrIjbbA9";
+	private String hashIV = "tKGaXZaQ860owP0n";
+	private String merchantID ="1063682";
+	
+	//private String serviceURL ="http://payment-stage.allpay.com.tw/Cashier/AioCheckOut";
+	
+	//private String hashKey = "5294y06JbISpM5x9";	
+	//private String hashIV = "v77hoKGq4kWxNNIS";
+	//private String merchantID ="2000132";
+	
 	private String paymentType ="aio";
 	private Map send = new HashMap();
 	private Map sendExtend= new HashMap();
@@ -26,12 +34,11 @@ public class AllPayConfigureation {
 	
 	public AllPayConfigureation(){
 		// What is difference between  return URL, ClientBackURL, ClientRedirectURL and ClientBackURL?
-		send.put("ReturnURL", "http://www.google.com/");
+		send.put("ReturnURL", "http://www.dealarenas.com/allpay_receive");
 		send.put("ClientBackURL", "");
 		send.put("OrderResultURL", "");
-		
-		send.put("MerchantTradeNo", "DA0005");
-		send.put("MerchantTradeDate", "2014/11/11 11:40:18");
+		send.put("MerchantTradeNo", "DA0030");
+		send.put("MerchantTradeDate", "2014/11/30 11:30:18");
 		send.put("PaymentType", "aio");
 		send.put("TotalAmount", "100");
 		send.put("TradeDesc", "Second Hand iPhone");

@@ -17,7 +17,15 @@
 package com.mycompany.controller.payment;
 
 
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 import org.broadleafcommerce.core.web.controller.cart.BroadleafCartController;
 import org.slf4j.Logger;
@@ -26,6 +34,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.mycompany.payment.allpay.AllPayConfigureationService;
@@ -39,7 +48,6 @@ public class AllPayController extends BroadleafCartController {
 	@RequestMapping("allpay_pay")
 	public ModelAndView allpayForm() {
 		logger.warn("Start allpay test");
-		
 		ModelAndView model = new ModelAndView();
 		model.addObject("action", allpayService.getAllPayConfig().getServiceURL());
 		model.addObject("argMap",allpayService.checkOutMap());
@@ -47,11 +55,25 @@ public class AllPayController extends BroadleafCartController {
 		return model;
 	}
 	
-	@RequestMapping(value = "allpay_receive", method = RequestMethod.POST)
-	public String allPayResultBack(ReturnPaymentParams params){
-		logger.warn(params.getMerchantID());
-		logger.warn(params.getMerchantTradeNo());
+	@RequestMapping(value = "allpay_receive", method = RequestMethod.POST, produces = "application/json")
+	public @ResponseBody String allPayResultBack(HttpServletRequest request, HttpServletResponse response, ReturnPaymentParams params) throws IOException {
+		Map<String, Object> responseMap = new HashMap<String, Object>();
+		logger.warn("MerchantID:"+params.getMerchantID());
+		logger.warn("MerchantTradeNo:"+params.getMerchantTradeNo());
+		logger.warn("TradeNo:"+params.getTradeNo());
+		logger.warn("TradeAmt:"+String.valueOf(params.getTradeAmt()));
 		
-		return "content/allpayReturnSuccess";
+	    return "1|OK";
 	}
+	
+	@RequestMapping("allpay_refund")
+	public ModelAndView allpayRefundForm() {
+		logger.warn("Start allpay refund test");
+		ModelAndView model = new ModelAndView();
+		model.addObject("action", "http://payment-stage.allpay.com.tw/Cashier/AioChargeback");
+		model.addObject("argMap",allpayService.ChargeBack());
+		model.setViewName("content/allpayRefund");
+		return model;
+	}
+	
 }

@@ -24,8 +24,65 @@ public class AllPayConfigureationService {
 		System.out.println(allPayConfig.getServiceURL());
 	}
 	
+	public Map ChargeBack() {
+		Map chargeBackMap = allPayConfig.getChargeBack();
+		chargeBackMap.remove("MerchantTradeNo");
+		chargeBackMap.remove("TradeNo");
+		chargeBackMap.remove("ChargeBackTotalAmount");
+		chargeBackMap.remove("Remark");
+		chargeBackMap.remove("PlatformID");
+		chargeBackMap.remove("CheckMacValue");
+		
+		chargeBackMap.put("MerchantTradeNo","DA0030");
+		//chargeBackMap.put("Remark", "");
+		chargeBackMap.put("MerchantID",allPayConfig.getMerchantID());
+		chargeBackMap.put("ChargeBackTotalAmount", "100");
+		//chargeBackMap.put("PlatformID", "");
+		chargeBackMap.put("TradeNo", "1412071316561935");
+		
+		// Sort by key to build szCheckMacValue
+		Map sortedArgParameters = new TreeMap(chargeBackMap);
+		
+		String szCheckMacValue = "HashKey=" + allPayConfig.getHashKey();
+		Set<String> argParam_keys = sortedArgParameters.keySet();
+		for (String arg : argParam_keys) {
+			szCheckMacValue += "&" + arg + "=" + sortedArgParameters.get(arg);
+		}
+		
+		szCheckMacValue += "&HashIV=" + allPayConfig.getHashIV();
+		
+		logger.warn(szCheckMacValue);
+		
+		try {
+			szCheckMacValue = URLEncoder.encode(szCheckMacValue, "UTF-8").toLowerCase();
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		szCheckMacValue.replaceAll("%2d", "-");
+		szCheckMacValue.replaceAll("%5f", "_");
+		szCheckMacValue.replaceAll("%2e", ".");
+		szCheckMacValue.replaceAll("%21", "!");
+		szCheckMacValue.replaceAll("%2a", "*");
+		szCheckMacValue.replaceAll("%28", "(");
+		szCheckMacValue.replaceAll("%29", ")");
+		
+		szCheckMacValue = md5(szCheckMacValue);
+		if (szCheckMacValue == null) {
+			logger.fatal("MD5 Error");
+			return null;
+		}
+		
+		sortedArgParameters.put("CheckMacValue", szCheckMacValue);
+		
+		return sortedArgParameters;
+	}
+	
 	public Map checkOutMap() {
 		Map argParameters = new HashMap();
+		
+		Map sendMap = allPayConfig.getSend();
 		
 		if (allPayConfig.getServiceURL().length() == 0) {
 			logger.fatal("ServiceURL is required.");
@@ -185,7 +242,8 @@ public class AllPayConfigureationService {
 		argParameters.put("ItemName", itemName);
 		argParameters.put("ItemURL", allPayConfig.getSend().get("ItemURL"));
 		
-		argParameters.putAll(allPayConfig.getSend());
+		//argParameters.putAll(allPayConfig.getSend());
+		argParameters.putAll(sendMap);
 		argParameters.putAll(allPayConfig.getSendExtend());
 		
 		if (allPayConfig.getSend().get("ChoosePayment").equals("ALL")) {
