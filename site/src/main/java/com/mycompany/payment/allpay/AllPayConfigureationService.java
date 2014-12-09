@@ -16,13 +16,15 @@ public class AllPayConfigureationService {
 	
 	private AllPayConfigureation allPayConfig = new AllPayConfigureation();
 	
-//	public AllPayConfigureationService(){
-//		System.out.println(allPayConfig.getServiceURL());
-//	}
+	public AllPayConfigureationService(String merchantTradeNo){
+		allPayConfig.setMerchantTradeNo(merchantTradeNo);
+		allPayConfig.config();
+	}
 	
 	public void test(){
 		System.out.println(allPayConfig.getServiceURL());
 	}
+	
 	
 	public Map ChargeBack() {
 		Map chargeBackMap = allPayConfig.getChargeBack();
@@ -236,7 +238,7 @@ public class AllPayConfigureationService {
 			return null;
 		}
 		
-		// Merge arraies become a single hug array to bulid POST
+		// Merge arraies become a single hug array to build POST
 		argParameters.put("MerchantID", allPayConfig.getMerchantID());
 		argParameters.put("PaymentType", allPayConfig.getPaymentType());
 		argParameters.put("ItemName", itemName);

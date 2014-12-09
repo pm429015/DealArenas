@@ -20,17 +20,13 @@ package com.mycompany.controller.payment;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 
 import org.broadleafcommerce.core.web.controller.cart.BroadleafCartController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -43,15 +39,26 @@ import com.mycompany.payment.allpay.ReturnPaymentParams;
 @Controller
 public class AllPayController extends BroadleafCartController {
 	private static final Logger logger = LoggerFactory.getLogger(AllPayController.class);
-	AllPayConfigureationService allpayService = new AllPayConfigureationService();
+	
+	
+	// tmp MerchantTradeNo 
+	int merchantNo = 0;
 	
 	@RequestMapping("allpay_pay")
 	public ModelAndView allpayForm() {
 		logger.warn("Start allpay test");
+		// Start a new payment MerchantTradeNo (for testing)
+		AllPayConfigureationService allpayService = new AllPayConfigureationService("Test00"+merchantNo);
+		
 		ModelAndView model = new ModelAndView();
 		model.addObject("action", allpayService.getAllPayConfig().getServiceURL());
 		model.addObject("argMap",allpayService.checkOutMap());
 		model.setViewName("content/allpay");
+		
+		logger.warn("A new Allpay payment was created with MerchantTradeNo: "+ "TEST00"+merchantNo);
+		// Assign a new  MerchantTradeNo id (for testing)
+		merchantNo++;
+		
 		return model;
 	}
 	
@@ -66,14 +73,14 @@ public class AllPayController extends BroadleafCartController {
 	    return "1|OK";
 	}
 	
-	@RequestMapping("allpay_refund")
-	public ModelAndView allpayRefundForm() {
-		logger.warn("Start allpay refund test");
-		ModelAndView model = new ModelAndView();
-		model.addObject("action", "http://payment-stage.allpay.com.tw/Cashier/AioChargeback");
-		model.addObject("argMap",allpayService.ChargeBack());
-		model.setViewName("content/allpayRefund");
-		return model;
-	}
+//	@RequestMapping("allpay_refund")
+//	public ModelAndView allpayRefundForm() {
+//		logger.warn("Start allpay refund test");
+//		ModelAndView model = new ModelAndView();
+//		model.addObject("action", "http://payment-stage.allpay.com.tw/Cashier/AioChargeback");
+//		model.addObject("argMap",allpayService.ChargeBack());
+//		model.setViewName("content/allpayRefund");
+//		return model;
+//	}
 	
 }
