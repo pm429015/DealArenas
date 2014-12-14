@@ -19,7 +19,9 @@ package com.mycompany.controller.payment;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -62,14 +64,29 @@ public class AllPayController extends BroadleafCartController {
 		return model;
 	}
 	
-	@RequestMapping(value = "allpay_receive", method = RequestMethod.POST, produces = "application/json")
-	public @ResponseBody String allPayResultBack(HttpServletRequest request, HttpServletResponse response, ReturnPaymentParams params) throws IOException {
-		Map<String, Object> responseMap = new HashMap<String, Object>();
+	@RequestMapping(value = "allpay_receive", method = RequestMethod.POST)
+	public @ResponseBody String allPayResultBack(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		//Map<String, Object> responseMap = new HashMap<String, Object>();
+		logger.warn("test allpay receive succesfully");
+		
+		Map map = request.getParameterMap();
+		Set s = map.entrySet();
+		Iterator iter = s.iterator();
+		while(iter.hasNext()){ 
+			Map.Entry<String,String[]> entry = (Map.Entry<String,String[]>)iter.next();
+	        String strKey = entry.getKey();
+	        String[] strObj = entry.getValue();
+	        String value =  strObj[0];
+	        logger.warn(strKey+":"+value);
+		}
+		
+		/*
 		logger.warn("MerchantID:"+params.getMerchantID());
 		logger.warn("MerchantTradeNo:"+params.getMerchantTradeNo());
 		logger.warn("TradeNo:"+params.getTradeNo());
 		logger.warn("TradeAmt:"+String.valueOf(params.getTradeAmt()));
-		
+		*/
+	
 	    return "1|OK";
 	}
 	
