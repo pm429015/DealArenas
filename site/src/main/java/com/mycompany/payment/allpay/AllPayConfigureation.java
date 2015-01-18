@@ -39,7 +39,7 @@ public class AllPayConfigureation {
 	private String MerchantTradeNo="";
 	
 	public void config(){
-		// What is difference between  return URL, ClientBackURL, ClientRedirectURL and ClientBackURL?
+		// What is difference between  return URL, ClientRedirectURL and ClientBackURL?
 		send.put("ReturnURL", "http://www.dealarenas.com/allpay_receive");
 		send.put("ClientBackURL", "");
 		send.put("OrderResultURL", "");

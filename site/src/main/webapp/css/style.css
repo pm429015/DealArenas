@@ -1177,6 +1177,8 @@ li.promotion,ul.promotion {
 	color: #fff;
 	float: left;
 	display: block;
+	margin-top: 300px;
+	
 }
 
 .cart_title a {
@@ -1226,6 +1228,7 @@ li.promotion,ul.promotion {
 #cart_products {
 	width: 580px;
 	float: left;
+	margin-top: 25px;
 }
 
 #cart_products thead tr th {
@@ -1448,6 +1451,7 @@ li.promotion,ul.promotion {
 	padding: 10px 20px;
 	background: url('../img/sidebarbg.jpg') repeat;
 	float: right;
+	margin-top: 25px;
 }
 
 #cart_total h3 {
@@ -3221,7 +3225,7 @@ button[disabled]:hover,input[disabled]:hover {
 	display: inline;
 	z-index: 3200;
 	position: absolute;
-	top: -15px;
+	top: 30px;
 	right: -16px;
 	cursor: pointer;
 }
