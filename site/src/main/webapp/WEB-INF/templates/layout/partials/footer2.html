@@ -1,0 +1,41 @@
+<footer>
+	<div class="container">
+		<div id="footer">
+			<div class="section">
+				<ul>
+					<li><div class="copy_right"><h3 th:text="#{footer.copyrightHC}">Copyright 2014 All Rights Reserved</h3></div></li>
+					<li><a th:href="@{/about_us}" onClick="ga('send', 'event', { eventCategory: 'about_us', eventAction: 'click'});" th:text="#{footer.aboutus}">關於我們</a> |</li>
+					<li><a th:href="@{/seller_FAQ}" onClick="ga('send', 'event', { eventCategory: 'seller-faq', eventAction: 'click'});" th:text="#{footer.seller.faq}">賣家有疑問</a> |</li>
+					<li><a th:href="@{/buyer_FAQ}" onClick="ga('send', 'event', { eventCategory: 'buyer-faq', eventAction: 'click'});" th:text="#{footer.buyer.faq}">買家有疑問</a> |</li>
+					<li><a href="mailto:dealarenas@gmail.com" th:text="#{footer.customerService}">聯絡我們</a> |</li>
+					<li><a href="https://plus.google.com/110346888427699648594">Google+</a> |</li>
+					<li><a href="https://www.facebook.com/dealarenas">Facebook</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<script th:src="@{//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js}"></script>
+<blc:bundle name="lib.js" mapping-prefix="/js/"
+	files="plugins.js,
+    libs/jquery.MetaData.js,
+    libs/jquery.rating.pack.js,
+    libs/jquery.dotdotdot-1.5.1.js" />
+<blc:bundle name="heatclinic.js" mapping-prefix="/js/"
+	files="BLC.js,
+    heatClinic.js,
+    cartOperations.js,
+    checkoutOperations.js,
+    globalOnReady.js,
+    manageAccountOperations.js,
+    reviewOperations.js" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="../../js/slidebars.js" th:src="@{/js/slidebars.js}"></script>
+<script>
+	(function($) {
+		$(document).ready(function() {
+			$.slidebars();
+		});
+	}) (jQuery);
+</script>
+

@@ -1,0 +1,103 @@
+
+<header id="masthead">			
+	<nav id="navbar" class="navbar navbar-default navbar-fixed-top sb-slide">
+		<div class="sb-toggle-left navbar-left">
+			<div class="navicon-line"></div>
+			<div class="navicon-line"></div>
+			<div class="navicon-line"></div>
+		</div>
+		<div class="container">
+			<div id="logo" th:text="#{home.brand}" th:href="@{/}" >DealArenas</div>
+			<ul id="nav" class="nav-left">
+				<li class="page-scroll"><a th:href="@{/}" class="navbar-texts"
+				onClick="ga('send', 'event', { eventCategory: 'buy-scroll', eventAction: 'click'});"><span
+					th:text="#{home.buy}">Buy</span></a></li>
+				<li class="page-scroll"><a th:href="@{/seller_home}"
+					onClick="ga('send', 'event', { eventCategory: 'seller-start', eventAction: 'click'});"><span
+						th:text="#{home.sell}">sell</span></a></li>
+				<!-- 
+				<li><a href="">買家</a></li>
+				<li><a href="">賣家</a></li>
+				-->
+			</ul>
+			<ul id="nav" class="nav-right">
+				<div th:if="${customer.anonymous}" th:remove="tag">
+					<li class="page-scroll">
+						<a th:text="#{home.login}" class="account" th:href="@{/login}" onClick="ga('send', 'event', { eventCategory: 'log_in', eventAction: 'click'});">Login</a>
+					</li>
+					<li class="page-scroll">
+						<a th:text="#{home.register}" class="account" th:href="@{/register}" onClick="ga('send', 'event', { eventCategory: 'register', eventAction: 'click'});">Register</a>
+					</li>
+					<li class="page-scroll">
+						<a id="cartLink" class="modalcart" th:href="@{/cart}">
+			                <span id="headerCartItemWordSingular_i18n" style="display: none;" th:text="#{home.item}" />
+			                <span id="headerCartItemWordPlural_i18n" style="display: none;" th:text="#{home.items}" />
+			                <span class="headerCartItemsCountWord" th:text="#{home.item}" />
+			            </a>
+					</li>
+				</div>
+		
+				<div th:unless="${customer.anonymous}" th:remove="tag">
+					<li class="page-scroll">
+						 
+						<a th:text="#{home.account}" class="my-account" th:href="@{/account}" onClick="ga('send', 'event', { eventCategory: 'customers_area', eventAction: 'click'});">Account</a>
+					</li>
+					<li class="page-scroll">
+						<a  th:text="#{home.logout}" th:href="@{/logout}" onClick="ga('send', 'event', { eventCategory: 'log_out', eventAction: 'click'});">Logout</a>
+					</li>
+					<li class="page-scroll">
+						<a id="cartLink" class="modalcart" th:href="@{/cart}">
+			                <span id="headerCartItemWordSingular_i18n" style="display: none;" th:text="#{home.item}" />
+			                <span id="headerCartItemWordPlural_i18n" style="display: none;" th:text="#{home.items}" />
+			                <span class="headerCartItemsCountWord" th:text="#{home.item}" />
+			            </a>
+					</li>
+				</div>
+				<!-- 
+				<li><a href="">登入</a></li>
+				<li><a href="">註冊</a></li>
+				<li><a href="">購物車</a></li>
+				-->
+			</ul>
+			<div th:if="${customer.anonymous}" th:remove="tag">
+				<div class="login" onClick="ga('send', 'event', { eventCategory: 'log_in', eventAction: 'click'});" style="display:none" th:text="#{home.login}">登入</div>
+			</div>
+			<div class="shopping_cart" href="/cart"></div>
+		</div>
+	</nav>
+</header>
+<div class="sb-slidebar sb-left">
+	<div class="search">
+		<input type="text" placeholder="Search" />
+	</div>
+	<div th:if="${customer.anonymous}" th:remove="tag">
+		<div class="signin"><div class="button" th:text="#{home.register}"  th:href="@{/register}" onClick="ga('send', 'event', { eventCategory: 'register', eventAction: 'click'});">Register</div></div>
+	</div>
+	<div th:unless="${customer.anonymous}" th:remove="tag">
+		<div class="section">
+			<ul>
+				<li><a th:text="#{home.account}" class="my-account" th:href="@{/account}" onClick="ga('send', 'event', { eventCategory: 'customers_area', eventAction: 'click'});">Account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="section">
+		<h3>商店</h3>
+		<ul>
+			<li><a th:href="@{/}" onClick="ga('send', 'event', { eventCategory: 'buy-scroll', eventAction: 'click'});" >首頁</a></li>
+			<li><a th:href="@{/}" onClick="ga('send', 'event', { eventCategory: 'buy-scroll', eventAction: 'click'});" >買家</a></li>
+			<li><a th:href="@{/seller_home}" onClick="ga('send', 'event', { eventCategory: 'seller-start', eventAction: 'click'});">賣家</a></li>
+		</ul>
+	</div>
+	<div class="section">
+		<h3 th:text="#{home.brand}" >DealArenas</h3>
+		<ul>
+			<li><a th:href="@{/about_us}" onClick="ga('send', 'event', { eventCategory: 'about_us', eventAction: 'click'});" th:text="#{footer.aboutus}">關於</a></li>
+			<li><a th:href="@{/seller_FAQ}" onClick="ga('send', 'event', { eventCategory: 'seller-faq', eventAction: 'click'});" th:text="#{footer.seller.faq}">賣家疑問</a></li>
+			<li><a th:href="@{/buyer_FAQ}" onClick="ga('send', 'event', { eventCategory: 'buyer-faq', eventAction: 'click'});" th:text="#{footer.buyer.faq}">買家疑問</a></li>
+			<li><a  href="mailto:dealarenas@gmail.com" th:text="#{footer.customerService}">聯絡我們</a></li>
+			<div th:unless="${customer.anonymous}" th:remove="tag">
+				<li><a href="">登出</a></li>
+			</div>
+		</ul>
+	</div>
+</div>

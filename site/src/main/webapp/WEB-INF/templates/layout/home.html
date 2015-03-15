@@ -2,18 +2,103 @@
 
 <html class="no-js" lang="en">
 
-<head
-	th:include="/layout/partials/head (pageTitle='輕鬆有保障二手手機拍賣平台 - 二手競技場')">
-</head>
-
+<!-- 舊的head
+	<head th:include="/layout/partials/head (pageTitle='輕鬆有保障二手手機拍賣平台 - 二手競技場')"></head>
+-->
+<!-- 新的head -->
+<head th:include="/layout/partials/head2 (pageTitle='輕鬆有保障二手手機拍賣平台 - 二手競技場')"></head>
 <body>
-
-	<div id="notification_bar"></div>
-
-	<header th:substituteby="layout/partials/header" />
-
+	<!-- <div id="notification_bar"></div>-->
+	<!-- 新的content -->
+	<header th:substituteby="layout/partials/header2" />
+	<article class="content">
+		<!-- 用來對齊的 -->
+		<figure id="grid" style="display:none">
+			<div class="col col1"></div>
+			<div class="col col2"></div>
+			<div class="col col3"></div>
+			<div class="col col4"></div>
+			<div class="col col5"></div>
+			<div class="col col6"></div>
+			<div class="col col7"></div>
+			<div class="col col8"></div>
+			<div class="col col9"></div>
+			<div class="col col10"></div>
+			<div class="col col11"></div>
+			<div class="col col12"></div>
+			<div class="col col13"></div>
+			<div class="col col14"></div>
+			<div class="col col15"></div>
+			<div class="col col16"></div>
+			<div class="col col17"></div>
+			<div class="col col18"></div>
+			<div class="col col19"></div>
+			<div class="col col20"></div>
+			<div class="col col21"></div>
+			<div class="col col22"></div>
+			<div class="col col23"></div>
+			<div class="col col24"></div>
+			<div class="col col25"></div>
+			<div class="col col26"></div>
+			<div class="col col27"></div>
+			<div class="col col28"></div>
+			<div class="col col29"></div>
+			<div class="col col30"></div>
+			<div class="col col31"></div>
+			<div class="col col32"></div>
+			<div class="col col33"></div>
+			<div class="col col34"></div>
+			<div class="col col35"></div>
+			<div class="col col36"></div>
+		</figure>
+		<div class="container">
+			
+			<blc:content contentType="Homepage Banner Ad" />       
+	        <section id="banners" th:if="${contentItem !=null and contentItem['targetUrl'] != null and contentItem['imageUrl'] != null}">
+	            <a th:href="@{${contentItem['targetUrl']}}"><img th:src="@{${contentItem['imageUrl']}}" /></a>       
+	        </section>
+			<section id="build">
+				<div>
+					<div class="left_column">
+						<div class="tool">
+							<h3 th:inline="text">
+								<span th:text="#{category.viewing}">Viewing</span>
+								[[${category.name}]] ([[${result.startResult}]] -
+								[[${result.endResult}]] <span th:text="#{category.of}">of</span>
+								[[${result.totalResults}]])
+							</h3>
+							<div th:substituteby="catalog/partials/productSortOptions"></div>
+						</div>
+						<div id="products">
+							<section th:each="product : ${products}" th:object="${product}"
+								th:include="catalog/partials/productListItem2"
+								class="product_container"></section>
+						</div>
+						<div style="clear:both"></div>
+						<div th:substituteby="catalog/partials/productPagingOptions" />
+						
+					</div>
+					<div class="right_column">
+						<div id="options">
+							<div th:substituteby="catalog/partials/rightHandBannerAds" />
+							<header>
+								<span th:text="#{category.filterResults}">Filter your
+									results</span>
+							</header>
+							<div th:substituteby="catalog/partials/facetFilter" />
+						</div>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+			</section>
+		</div>
+	</article>
+	<!-- 新的footer -->
+	<footer th:substituteby="layout/partials/footer2" />
 	
-
+	
+	<!-- 舊的content
+	<header th:substituteby="layout/partials/header" />
 	<div id="content" class="width_setter group" role="main">
 		 <blc:content contentType="Homepage Banner Ad" />       
         <div id="banners" th:if="${contentItem !=null and contentItem['targetUrl'] != null and contentItem['imageUrl'] != null}">
@@ -42,7 +127,6 @@
 
 		</section>
 		<section id="right_column">
-
 			<div id="options">
 				<div th:substituteby="catalog/partials/rightHandBannerAds" />
 				<header>
@@ -51,32 +135,13 @@
 				</header>
 
 				<div th:substituteby="catalog/partials/facetFilter" />
-
-<!-- 				<section id="right_column"> -->
-<!-- 					<header> -->
-<!-- 						<span th:text="#{category.featuredProducts}">Featured -->
-<!-- 							Products</span> -->
-<!-- 					</header> -->
-<!-- 					<div id="options"> -->
-<!-- 						<div class="section" th:object="${category}"> -->
-<!-- 							<blc:related_products categoryId="*{id}" quantity="3" /> -->
-<!-- 							<ul id="featured_products" class="group"> -->
-<!-- 								<li th:each="product : ${products}" th:object="${product}" -->
-<!-- 									th:include="catalog/partials/productListItem" -->
-<!-- 									class="product_container"></li> -->
-<!-- 							</ul> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 				</section> -->
-
 			</div>
 		</section>
 	</div>
-
-
-
-
+	-->
+	<!-- 舊的footer
 	<footer th:substituteby="layout/partials/footer" />
+	-->
 	<script src="../../js/home.js" th:src="@{/js/home.js}"></script>
 </body>
 
